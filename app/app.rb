@@ -6,10 +6,6 @@ module SsLandingPage
     register Padrino::Helpers
     enable :sessions
 
-    get "/" do
-      render :slim, File.read("index.slim")
-    end
-
     ##
     # Caching support.
     #
