@@ -1,6 +1,6 @@
 // DON'T FUCKING FORGET!!!!!
+// ADD FUCKING VENDOR PREFIXES U BITCH
 // INCLUDE CAROUSEL CDN
-// INCLUDE FONT AWESOME YA BISH
 
 $stacey-blue: #010a22;
 $stacey-light: #04288a;
@@ -11,7 +11,6 @@ $copy: #808080;
 $light-gray: #777;
 $money-green: #85bb65;
 
-// ADD FUCKING VENDORS U BITCH
 @keyframes bounce-right {
   0% {
     left: 0;
@@ -50,6 +49,10 @@ h1,h2,h3,h4,h5,h6 {
 }
 
   
+ul {
+  list-style-type: none;
+  padding: 0;
+}
 
 li {
   a {
@@ -78,6 +81,7 @@ li {
   }
 }
 
+// FIX DIS SHIT
 .branding-temporary {
   position: fixed; 
   color: white;
@@ -92,7 +96,6 @@ li {
   z-index:99;
   top: 0;
   background: white;
-  //color: $stacey-blue;
   display: none;
   width: 100%;
   font-family: "Futura";
@@ -101,9 +104,7 @@ li {
   box-shadow: 0 10px 20px -12px rgba(0,0,0,0.42), 0 3px 20px 0 rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.2);
   
   #menu {
-    list-style-type: none;
     line-height: 32px;
-    padding: 0;
     margin: 0;
     display: inline;
     overflow: hidden;
@@ -435,10 +436,8 @@ footer {
     display: inline;
     overflow: hidden;
     float: left;
-    padding: 0;
     bottom: 5px;
     left: 10px;
-    list-style-type: none;
     margin: 0;
     
     li {
