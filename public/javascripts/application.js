@@ -8,5 +8,14 @@
         $("#nav").fadeOut(100);
       }
     });
+
+    // DO THIS SHIT W CSS MY G
+    $("#convert").click(function(e) {
+      e.preventDefault();
+
+      $("#call-to-action").hide();
+      $("#contact-form").show();
+      $("#name").focus();
+    });
   });
 })(jQuery);

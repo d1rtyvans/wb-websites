@@ -20,7 +20,7 @@ header#nav
         li
           a href="#statistics" What we provide
         li 
-          a.cta-button href="#trigger-sale" Hire us
+          a#hire-us.cta-button href="#trigger-sale" Hire us
   
 /! Hero
 section#hero
@@ -129,12 +129,20 @@ section#testimonials
 
 
 section#trigger-sale
-  .row
-    .col-2
-    .col-8
-      h2 Let's get started.
-      a href="#" Schedule a free consultation
-    .col-2
+  #call-to-action
+    h2 Let's get started.
+    a#convert href="#" Schedule a free consultation
+  #contact-form
+    form
+      p type="Name:"
+        input#name type="text" placeholder="Let's get your name,"
+      p type="Email:"
+        input type="email" placeholder="and your email."
+      p type="Message:"
+        textarea placeholder="What can we do for you?"
+      p
+        button Drink me
+
 
 
 

@@ -87,10 +87,11 @@ li {
   background: orange;
   padding: 10px;
   color: white;
-
+  transition: background-color 1000ms linear;
+    
   &:hover {
-    color: orange;
-    background: $stacey-blue;
+    background-color: #ffba3a;
+    transition: background-color 500ms linear;
   }
 }
 
@@ -141,6 +142,15 @@ li {
       margin: 5px 10px;
       letter-spacing: 1px;
     }
+
+    #hire-us {
+      padding: 8px;
+      border: 2px solid orange;
+
+      &:hover {
+        background-color: white;
+      }
+    }
   }
 }
 
@@ -164,19 +174,20 @@ li {
   a {
     text-transform: uppercase;
     background-color: orange;
-    color: $dark-gray;
+    color: $stacey-blue;
     cursor: pointer;
-    border: 2px solid orange;
     font-size: 0.6em;
     padding: 5px 10px;
     font-weight: bold;
     font-family: sans-serif;
     letter-spacing: 2px;
-    box-shadow: 1px 0px 1px $shaded-orange, 0px 1px 1px orange, 2px 1px 1px $shaded-orange, 1px 2px 1px orange, 3px 2px 1px $shaded-orange, 2px 3px 1px orange, 4px 3px 1px $shaded-orange, 3px 4px 1px orange, 5px 4px 1px $shaded-orange, 4px 5px 1px orange, 6px 5px 1px $shaded-orange;
+    //box-shadow: 1px 0px 1px $shaded-orange, 0px 1px 1px orange, 2px 1px 1px $shaded-orange, 1px 2px 1px orange, 3px 2px 1px $shaded-orange, 2px 3px 1px orange, 4px 3px 1px $shaded-orange, 3px 4px 1px orange, 5px 4px 1px $shaded-orange, 4px 5px 1px orange, 6px 5px 1px $shaded-orange;
+    box-shadow: 1px 0px 1px $shaded-orange, 0px 1px 1px orange, 2px 1px 1px $shaded-orange, 1px 2px 1px orange, 3px 2px 1px $shaded-orange, 2px 3px 1px orange, 4px 3px 1px $shaded-orange, 3px 4px 1px orange;
+    transition: background-color 500ms linear;
     
     &:hover {
-      color: orange;
-      background-color: $stacey-blue;
+      background-color: #ffba3a;
+      transition: background-color 500ms linear;
     }
   }
   
@@ -184,19 +195,6 @@ li {
     text-align: right;
   }
 }
-
-/*
-.gradient {
-  background: $stacey-blue;
-  background: linear-gradient($stacey-blue, #44464c);
-}
-
-.gradient-rev {
-  background: white;
-  background: linear-gradient(#44464c, $stacey-blue);
-  
-}
-*/
 
 #hook {
   margin-top: 0;
@@ -208,7 +206,7 @@ li {
     content: "\279E";
     color: orange;
     margin-left: 15px;
-    animation: bounce-right 3s infinite;
+    animation: bounce-right 3s infinite 2s;
   }
   
   .human, .business {
@@ -450,17 +448,59 @@ li {
   
   
   a {
-    background: orange;
-    color: #fff;
-    font-size: 13px;
     text-transform: uppercase;
-    padding: 10px 20px;
-    font-weight: bold;
-    //border: 2px solid #fff;
+    background: orange; 
+    color: white;
+    padding: 20px 20px;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-align: center;
+    box-shadow: 0 8px 12px 1px rgba(0,0,0,0.14), 0 3px 15px 2.5px rgba(0,0,0,0.12), 0 4px 5px 2.5px rgba(0,0,0,0.2);
+    //box-shadow: 1px 0px 1px $shaded-orange, 0px 1px 1px orange, 2px 1px 1px $shaded-orange, 1px 2px 1px orange, 3px 2px 1px $shaded-orange, 2px 3px 1px orange, 4px 3px 1px $shaded-orange, 3px 4px 1px orange, 5px 4px 1px $shaded-orange, 4px 5px 1px orange, 6px 5px 1px $shaded-orange;
     
     &:hover {
       color: orange;
-      background: $stacey-blue;
+      background: white;
+    }
+  }
+
+  #contact-form {
+    display: none;
+    text-align: center;
+
+    form {
+      width: 300px;
+      margin: 0 auto;
+      //font-size: 1rem;
+
+      input, textarea {
+        background: white;
+        box-shadow: 0 8px 12px 1px rgba(0,0,0,0.14), 0 3px 15px 2.5px rgba(0,0,0,0.12), 0 4px 5px 2.5px rgba(0,0,0,0.2);
+      }
+
+      input, textarea, button {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.75rem;
+        width: 100%;
+        padding: 20px;
+        border: 0;
+        outline: 0;
+        box-shadow: 0 8px 12px 1px rgba(0,0,0,0.14), 0 3px 15px 2.5px rgba(0,0,0,0.12), 0 4px 5px 2.5px rgba(0,0,0,0.2);
+      }
+
+      button {
+        cursor: pointer;
+        text-align: center;
+        background: orange;
+        color: white;
+        box-shadow: 0 8px 12px 1px rgba(0,0,0,0.14), 0 3px 15px 2.5px rgba(0,0,0,0.12), 0 4px 5px 2.5px rgba(0,0,0,0.2);
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 150px;
+      }
     }
   }
 }

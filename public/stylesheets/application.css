@@ -39,10 +39,11 @@ li a {
 .cta-button {
   background: orange;
   padding: 10px;
-  color: white; }
+  color: white;
+  transition: background-color 1000ms linear; }
   .cta-button:hover {
-    color: orange;
-    background: #010a22; }
+    background-color: #ffba3a;
+    transition: background-color 500ms linear; }
 
 .content-container {
   position: relative;
@@ -85,6 +86,11 @@ li a {
       float: left;
       margin: 5px 10px;
       letter-spacing: 1px; }
+    #nav #menu #hire-us {
+      padding: 8px;
+      border: 2px solid orange; }
+      #nav #menu #hire-us:hover {
+        background-color: white; }
 
 .hero {
   height: 600px;
@@ -102,34 +108,22 @@ li a {
   .hero a {
     text-transform: uppercase;
     background-color: orange;
-    color: #333;
+    color: #010a22;
     cursor: pointer;
-    border: 2px solid orange;
     font-size: 0.6em;
     padding: 5px 10px;
     font-weight: bold;
     font-family: sans-serif;
     letter-spacing: 2px;
-    box-shadow: 1px 0px 1px #e29200, 0px 1px 1px orange, 2px 1px 1px #e29200, 1px 2px 1px orange, 3px 2px 1px #e29200, 2px 3px 1px orange, 4px 3px 1px #e29200, 3px 4px 1px orange, 5px 4px 1px #e29200, 4px 5px 1px orange, 6px 5px 1px #e29200; }
+    box-shadow: 1px 0px 1px #e29200, 0px 1px 1px orange, 2px 1px 1px #e29200, 1px 2px 1px orange, 3px 2px 1px #e29200, 2px 3px 1px orange, 4px 3px 1px #e29200, 3px 4px 1px orange;
+    transition: background-color 500ms linear; }
     .hero a:hover {
-      color: orange;
-      background-color: #010a22; }
+      background-color: #ffba3a;
+      transition: background-color 500ms linear; }
   @media only screen and (min-width: 600px) {
     .hero {
       text-align: right; } }
 
-/*
-.gradient {
-  background: $stacey-blue;
-  background: linear-gradient($stacey-blue, #44464c);
-}
-
-.gradient-rev {
-  background: white;
-  background: linear-gradient(#44464c, $stacey-blue);
-  
-}
-*/
 #hook {
   margin-top: 0;
   line-height: 25px; }
@@ -138,7 +132,7 @@ li a {
     content: "\279E";
     color: orange;
     margin-left: 15px;
-    animation: bounce-right 3s infinite; }
+    animation: bounce-right 3s infinite 2s; }
   #hook .human, #hook .business {
     line-height: 30px; }
   @media only screen and (min-width: 768px) {
@@ -274,15 +268,44 @@ li a {
   text-align: center;
   font-size: 1.7em; }
   #trigger-sale a {
-    background: orange;
-    color: #fff;
-    font-size: 13px;
     text-transform: uppercase;
-    padding: 10px 20px;
-    font-weight: bold; }
+    background: orange;
+    color: white;
+    padding: 20px 20px;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-align: center;
+    box-shadow: 0 8px 12px 1px rgba(0, 0, 0, 0.14), 0 3px 15px 2.5px rgba(0, 0, 0, 0.12), 0 4px 5px 2.5px rgba(0, 0, 0, 0.2); }
     #trigger-sale a:hover {
       color: orange;
-      background: #010a22; }
+      background: white; }
+  #trigger-sale #contact-form {
+    display: none;
+    text-align: center; }
+    #trigger-sale #contact-form form {
+      width: 300px;
+      margin: 0 auto; }
+      #trigger-sale #contact-form form input, #trigger-sale #contact-form form textarea {
+        background: white;
+        box-shadow: 0 8px 12px 1px rgba(0, 0, 0, 0.14), 0 3px 15px 2.5px rgba(0, 0, 0, 0.12), 0 4px 5px 2.5px rgba(0, 0, 0, 0.2); }
+      #trigger-sale #contact-form form input, #trigger-sale #contact-form form textarea, #trigger-sale #contact-form form button {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.75rem;
+        width: 100%;
+        padding: 20px;
+        border: 0;
+        outline: 0;
+        box-shadow: 0 8px 12px 1px rgba(0, 0, 0, 0.14), 0 3px 15px 2.5px rgba(0, 0, 0, 0.12), 0 4px 5px 2.5px rgba(0, 0, 0, 0.2); }
+      #trigger-sale #contact-form form button {
+        cursor: pointer;
+        text-align: center;
+        background: orange;
+        color: white;
+        box-shadow: 0 8px 12px 1px rgba(0, 0, 0, 0.14), 0 3px 15px 2.5px rgba(0, 0, 0, 0.12), 0 4px 5px 2.5px rgba(0, 0, 0, 0.2); }
+      #trigger-sale #contact-form form textarea {
+        resize: vertical;
+        min-height: 150px; }
 
 footer {
   color: #777;
