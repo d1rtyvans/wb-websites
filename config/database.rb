@@ -14,20 +14,30 @@
 #   }
 #
 ActiveRecord::Base.configurations[:development] = {
-  :adapter => 'sqlite3',
-  :database => Padrino.root('db', 'ss_landing_page_development.db')
-
+  :adapter => 'postgresql',
+  :database => 'ss_landing_page_development',
+  :username => 'root',
+  :password => '',
+  :host     => 'localhost',
+  :port     => 5432
 }
 
 ActiveRecord::Base.configurations[:production] = {
-  :adapter => 'sqlite3',
-  :database => Padrino.root('db', 'ss_landing_page_production.db')
-
+  :adapter  => 'postgresql',
+  :database => 'dfr1bu5uf23ced',
+  :username => 'pnelhqfcwscriz',
+  :password => '3f61f3b791639321ed99a745687d4fecdc9d11f67a2e9c4c8be1efcba69bf54c',
+  :host     => 'ec2-54-83-205-71.compute-1.amazonaws.com',
+  :port     => 5432
 }
 
 ActiveRecord::Base.configurations[:test] = {
-  :adapter => 'sqlite3',
-  :database => Padrino.root('db', 'ss_landing_page_test.db')
+  :adapter => 'postgresql',
+  :database => 'ss_landing_page_test',
+  :username => 'root',
+  :password => '',
+  :host     => 'localhost',
+  :port     => 5432
 
 }
 
