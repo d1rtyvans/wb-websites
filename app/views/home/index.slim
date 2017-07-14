@@ -18,24 +18,24 @@ header#nav
         li 
           a href="#testimonials" Clients
         li
-          a href="#value-prop" What we provide
+          a href="#statistics" What we provide
         li 
           a.cta-button href="#trigger-sale" Hire us
   
 /! Hero
-.gradient        
-  section#hero
-    .row
-      .col-12.hero
-        / MAYBE REFORMAT THIS THANG. DON'T PUT HIRE US IN H1
-        h1
-          | We make great websites.
-          br
-          | Want one?
-          br 
-          a href="#" Hire us  
+section#hero
+  .row
+    .col-12.hero
+      / MAYBE REFORMAT THIS THANG. DON'T PUT HIRE US IN H1
+      h1
+        | We make great websites.
+        br
+        | Want one?
+        br 
+        a href="#" Hire us  
 
-  /! Hook
+/! Hook
+.content-container
   section#hook
     .row.first-hook
       /! use offset instead
@@ -69,60 +69,72 @@ section#testimonials
       .col-8
         .testimonial
           .pic
-            img src="https://www.chopra.com/sites/default/files/bio_img/deepakchopra2015-400x400.jpg"
+            img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAzjAAAAJDViMDRlMTJhLTg5ZTYtNDVkZC05MGM2LWExNzRjOTVlMTRkMg.jpg"
           p.description
-            | Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            | I was extremely impressed with Stacey Software.  Chris' intuitive ability to understand what we wanted, and to execute on it quickly, proved invaluable to our business.  We needed to create a site in a very short time period, and Chris worked long hours and late nights to make it happen.  He's also been thoughtful and flexible in integrating new feedback as our business evolves.  I look forward to working with him for a long time to come.
           h3.testimonial-title
-            | Deepak
+            | Amy Henderson
           span.post
-            | Health Guru
+            | CEO, tendlab
       .col-2
 
 
 
-
-
-
-.gradient-rev
-  section#value-prop
+.content-container
+  section#statistics
     .row
-      .col-p5
-      .col-11
-        h2.value-prop-title
-          | I know what you're thinking. What makes us so different?
-          br
-          | Well, that's 
-          em easy... 
-          | Our work is
-      .col-p5
+      .col-6
+        h2 The jury is in
+        .stat-card
+          .percentage
+            i.fa.fa-user
+            i.fa.fa-user
+            i.fa.fa-user
+            i.fa.fa-user
+            i.fa.fa-user.faded
+          p
+            strong 4 out of 5 
+            | consumers believe businesses with websites are 
+            em more credible 
+            | than ones without them. 90% rely on the internet to locate and evaluate local goods and services. According to this 
+            a href="https://www.score.org/resource/infographic-5-reasons-your-small-business-needs-website" 2015 study
+            | .
+      .col-6
+        h2 But we've got you.
+        .percentage
+          i.fa.fa-handshake-o
+        p We take great pride in helping local businesses boost their online presence. Be it a new website, or improvements to an existing one, We will work with you every step of the way to ensure your needs are met.
+
+
+  section#value-prop
+    h2.value-prop-title Our work in 3 words
     .row
       .vert-align
-        .col-p5
-        .col-3.value-prop-card
+        .col-4.value-prop-card
           i.fa.fa-clock-o.prompt aria-hidden="true"
-          h3 Prompt
+          h3.prompt Prompt
           p Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Curabitur blandit tempus porttitor. Cock meat sandy my g what sup wit it doe
-        .col-1
-        .col-3.value-prop-card
+        .col-4.value-prop-card
           i.fa.fa-money.affordable aria-hidden="true"
-          h3 Affordable
+          h3.affordable Affordable
           p Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Curabitur blandit tempus porttitor. Cock meat sandy my g what sup wit it doe
-        .col-1
-        .col-3.value-prop-card
+        .col-4.value-prop-card
           i.fa.fa-check-square-o.stylish aria-hidden="true"
-          h3 
-            em and 
-            | Stylish
+          h3.stylish Stylish
           p Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Curabitur blandit tempus porttitor. Cock meat sandy my g what sup wit it doe
-        .col-p5  
 
-    #trigger-sale
-      .row
-        .col-2
-        .col-8
-          h2 Let's get started.
-          a href="#" Schedule a free consultation
-        .col-2
+
+
+
+
+
+section#trigger-sale
+  .row
+    .col-2
+    .col-8
+      h2 Let's get started.
+      a href="#" Schedule a free consultation
+    .col-2
 
 
 
