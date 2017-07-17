@@ -8,19 +8,17 @@ head
   | stacey software
 
 header#nav
-  .row
-    .col-4#branding
-      | stacey software
-    .col-8
-      ul#menu
-        li
-          a href="#hook" Why us?
-        li 
-          a href="#testimonials" Clients
-        li
-          a href="#statistics" What we provide
-        li 
-          a#hire-us.cta-button href="#trigger-sale" Hire us
+  #branding
+    | stacey software
+  ul#menu
+    li
+      a href="#hook" Why us?
+    li 
+      a href="#testimonials" Clients
+    li
+      a href="#statistics" What we provide
+    li 
+      a#hire-us.cta-button href="#trigger-sale" Hire us
   
 /! Hero
 section#hero
@@ -129,19 +127,20 @@ section#testimonials
 
 
 section#trigger-sale
-  #call-to-action
-    h2 Let's get started.
-    a#convert href="#" Schedule a free consultation
-  #contact-form
-    form
-      p type="Name:"
-        input#name type="text" placeholder="Let's get your name,"
-      p type="Email:"
-        input type="email" placeholder="and your email."
-      p type="Message:"
-        textarea placeholder="What can we do for you?"
-      p
-        button Drink me
+  .vert-align
+    #call-to-action.fade-in
+      h2 Let's get started.
+      a#convert href="#" Schedule a free consultation
+    #contact-form
+      form
+        p type="Name:"
+          input#name type="text" placeholder="Let's get your name,"
+        p type="Email:"
+          input type="email" placeholder="and your email."
+        p type="Message:"
+          textarea placeholder="What can we do for you?"
+        p
+          button Send message
 
 
 

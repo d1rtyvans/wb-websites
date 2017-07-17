@@ -70,9 +70,13 @@ li a {
   display: none;
   width: 100%;
   font-family: "Futura";
+  padding: 5px;
+  line-height: 35px;
   font-size: 1.5em;
   line-height: 40px;
   box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.42), 0 3px 20px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2); }
+  #nav #branding {
+    display: inline; }
   #nav #menu {
     line-height: 32px;
     margin: 0;
@@ -264,9 +268,11 @@ li a {
 
 #trigger-sale {
   background: orange;
-  padding: 200px 0 250px;
+  height: 600px;
+  width: 100%;
   text-align: center;
-  font-size: 1.7em; }
+  font-size: 1.7em;
+  display: table; }
   #trigger-sale a {
     text-transform: uppercase;
     background: orange;
@@ -280,7 +286,6 @@ li a {
       color: orange;
       background: white; }
   #trigger-sale #contact-form {
-    display: none;
     text-align: center; }
     #trigger-sale #contact-form form {
       width: 300px;
@@ -306,6 +311,19 @@ li a {
       #trigger-sale #contact-form form textarea {
         resize: vertical;
         min-height: 150px; }
+  #trigger-sale #call-to-action,
+  #trigger-sale #contact-form {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: -9999px; }
+    #trigger-sale #call-to-action.fade-in,
+    #trigger-sale #contact-form.fade-in {
+      visibility: visible;
+      opacity: 1;
+      position: static; }
+  #trigger-sale #contact-form {
+    transition: opacity 1s linear; }
 
 footer {
   color: #777;

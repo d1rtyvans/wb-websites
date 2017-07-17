@@ -13,8 +13,10 @@
     $("#convert").click(function(e) {
       e.preventDefault();
 
-      $("#call-to-action").hide();
-      $("#contact-form").show();
+      //$("#call-to-action").hide();
+      $("#call-to-action").removeClass("fade-in");
+      $("#contact-form").addClass("fade-in");
+      //$("#contact-form").show();
       $("#name").focus();
     });
   });
