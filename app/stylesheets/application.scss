@@ -2,17 +2,9 @@
 // ADD FUCKING VENDOR PREFIXES U BITCH
 // INCLUDE CAROUSEL CDN
 
-$stacey-blue: #010a22;
-$stacey-light: #04288a;
-$dark-gray: #333;
-$shaded-orange: #e29200;
-$header: #333;
-$copy: #808080;
-$light-gray: #777;
-
-$sub-heading: 0.9em;
-$all-caps: 0.75em;
-$letter-space: 0.17em;
+@import "variables";
+@import "global";
+@import "nav";
 
 @keyframes bounce-right {
   0% {
@@ -36,208 +28,6 @@ $letter-space: 0.17em;
   }
 }
 
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  font-size: 16px;
-  background: $stacey-blue;
-  background-image:
-    linear-gradient(
-      $stacey-blue,
-      #757a86,
-      $stacey-blue
-    );
-}
-
-input[type="text"], // DO AWAY WITH THIS
-input[type="email"],
-textarea {
-  //font-size: 16px !important;
-}
-
-#nav {
-  position: fixed;
-  visibility: hidden;
-  top: 0;
-  left: 0;
-  padding: 5px;
-  z-index: 9999;
-  width: 100%;
-  min-height: 50px;
-  max-height: 300px;
-  background: white;
-  box-shadow: 0 0 10px gray;
-  line-height: 50px;
-  box-shadow: 0 10px 20px -12px rgba(0,0,0,0.42), 0 3px 20px 0 rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.2);
-
-  &.visible {
-    visibility: visible;
-
-    .brand {
-      color: #333;
-    }
-  }
-
-  $nav-spacing: 20px;
-
-  li {
-    display: inline-block;
-    margin-right: $nav-spacing;
-
-    a {
-      font-weight: initial;
-    }
-  }
-
-  .brand {
-    visibility: visible;
-    margin-left: $nav-spacing;
-    text-transform: lowercase;
-    font-size: 1.5rem;
-    color: #fff;
-    font-family: "Futura";
-    font-weight: lighter;
-    letter-spacing: 1px;
-
-    &:hover {
-      color: orange;
-    }
-
-    > img {
-      height: inherit;
-    }
-  }
-}
-
-#menu {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  max-width: max-content;
-  float: right;
-
-  #hire-us {
-    padding: 8px;
-    border: 2px solid orange;
-
-    &:hover {
-      background-color: white;
-    }
-  }
-}
-
-.show-menu {
-  display: none;
-  cursor: pointer;
-  max-width: max-content;
-  float: right;
-  margin-top: 17px;
-  margin-right: 15px;
-
-  img {
-    padding-top: 20px;
-    height: 30px;
-  }
-
-  #up {
-    display: none;
-  }
-}
-
-input[type=checkbox] {
-  display: none;
-
-  &:checked ~ #menu {
-    display: block;
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 760px) {
-  #menu {
-    display: none;
-    float: none;
-    max-width: 100%;
-  }
-
-  #menu li, li a {
-    width: 100%;
-  }
-
-  .show-menu {
-    display: block;
-  }
-}
-
-p {
-  color: $copy;
-  line-height: 1.9;
-}
-
-a {
-  color: $light-gray;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: $all-caps;
-  letter-spacing: $letter-space;
-  font-weight: bold;
-  cursor: pointer;
-
-  &:hover {
-    color: orange;
-  }
-}
-
-h3 {
-  text-transform: uppercase;
-  font-size: $sub-heading;
-}
-
-h1,h2,h3,h4,h5,h6 {
-  color: $header;
-}
-
-  
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-  
-
-
-// Reusable styles
-.cta-button {
-  background: orange;
-  padding: 10px;
-  color: white;
-  transition: background-color 1000ms linear;
-    
-  &:hover {
-    background-color: #ffba3a;
-    transition: background-color 500ms linear;
-  }
-}
-
-.content-container {
-  position: relative;
-  z-index: 1;
-  margin: -15 30px;
-  padding: 40px 20px;
-  background: white;
-  border-radius: 6px;
-  box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px 5px rgba(0,0,0,0.2);
-}
-
 // FIX DIS SHIT
 .hero {
   height: 600px;
@@ -252,7 +42,10 @@ ul {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     letter-spacing: 1.75px;
     font-weight: lighter;
-    padding-right: 15px;
+
+    @media only screen and (min-width: $desktop) {
+      padding-right: 15px;
+    }
   }
   
   a {
@@ -274,7 +67,7 @@ ul {
   }
   
   @media only screen and (min-width: 600px) {
-    text-align: right;
+    text-align: right; // MOBILE FIRST BITCH
   }
 }
 
@@ -295,7 +88,7 @@ ul {
   }
   
   .human {
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: $desktop) {
       width: 295px;
       word-wrap: break-word;
     }
@@ -315,7 +108,7 @@ ul {
     
     &:before {
       // FIX THIS BUG U BEEZYYYYYYYY
-      @media only screen and (min-width: 768px) {
+      @media only screen and (min-width: $desktop) {
         content: "\a";
         white-space: pre;
       }
@@ -630,7 +423,7 @@ img {
     .col-m-12 {width: 100%;}
 }
 
-@media only screen and (min-width: 768px) { // Desktop
+@media only screen and (min-width: $desktop) { // Desktop
   .col-p5 {width: 4.16%}
   .col-1 {width: 8.33%;}
   .col-2 {width: 16.66%;}

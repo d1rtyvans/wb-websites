@@ -1,0 +1,114 @@
+#nav {
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  padding: 5px;
+  z-index: 9999;
+  width: 100%;
+  min-height: 50px;
+  max-height: 300px;
+  background: white;
+  box-shadow: 0 0 10px gray;
+  line-height: 50px;
+  box-shadow: 0 10px 20px -12px rgba(0,0,0,0.42), 0 3px 20px 0 rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.2);
+
+  &.visible {
+    visibility: visible;
+
+    .brand {
+      color: #333;
+    }
+  }
+
+  $nav-spacing: 20px;
+
+  li {
+    display: inline-block;
+    margin-right: $nav-spacing;
+
+    a {
+      font-weight: initial;
+    }
+  }
+
+  .brand {
+    visibility: visible;
+    margin-left: $nav-spacing;
+    text-transform: lowercase;
+    font-size: 1.5rem;
+    color: #fff;
+    font-family: "Futura";
+    font-weight: lighter;
+    letter-spacing: 1px;
+
+    &:hover {
+      color: orange;
+    }
+
+    > img {
+      height: inherit;
+    }
+  }
+}
+
+#menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  max-width: max-content;
+  float: right;
+
+  #hire-us {
+    padding: 8px;
+    border: 2px solid orange;
+
+    &:hover {
+      background-color: white;
+    }
+  }
+}
+
+.show-menu {
+  display: none;
+  cursor: pointer;
+  max-width: max-content;
+  float: right;
+  margin-top: 17px;
+  margin-right: 15px;
+
+  img {
+    padding-top: 20px;
+    height: 30px;
+  }
+
+  #up {
+    display: none;
+  }
+}
+
+input[type=checkbox] {
+  display: none;
+
+  &:checked ~ #menu {
+    display: block;
+    text-align: center;
+  }
+}
+
+// DO MOBILE FIRST U BEEZY
+@media screen and (max-width: $desktop) {
+  #menu {
+    display: none;
+    float: none;
+    max-width: 100%;
+  }
+
+  #menu li, li a {
+    width: 100%;
+  }
+
+  .show-menu {
+    display: block;
+  }
+}
