@@ -1,23 +1,41 @@
 (function($) {
-  $(document).ready(function() {
-    $(window).scroll(function() {
-      // USE AN ANIMATION INSTEAD DOGGY
-      if($(this).scrollTop() > 550) {
-        $("#nav").fadeIn(100);
-      } else {
-        $("#nav").fadeOut(100);
-      }
-    });
+  // navbar appear on scroll
+  $(window).scroll(function() {
+    if($(this).scrollTop() > 550) {
+      $("#nav").addClass("visible");
+    } else {
+      $("#nav").removeClass("visible");
+    }
+  });
 
-    // DO THIS SHIT W CSS MY G
-    $("#convert").click(function(e) {
-      e.preventDefault();
+  // navbar dropdown
+  $("#show-menu").click(function() {
+    if (this.checked) {
+      $("#down").hide();
+      $("#up").show();
+    } else {
+      $("#up").hide();
+      $("#down").show();
+    }
+  });
 
-      //$("#call-to-action").hide();
-      $("#call-to-action").removeClass("fade-in");
-      $("#contact-form").addClass("fade-in");
-      //$("#contact-form").show();
-      $("#name").focus();
-    });
+  // close menu when nav anchor link clicked (mobile)
+  $("#menu a").click(function() {
+    if ($(".show-menu").is(":visible")) {
+      console.log("BITCH");
+      setTimeout(function() {
+        $("#show-menu").prop("checked", false);
+        $("#up").hide();
+        $("#down").show();
+      }, 200);
+    }
+  });
+
+  // contact form fade in
+  $("#convert").click(function(event) {
+    event.preventDefault();
+    $("#call-to-action").removeClass("fade-in");
+    $("#contact-form").addClass("fade-in");
+    $("#name").focus();
   });
 })(jQuery);

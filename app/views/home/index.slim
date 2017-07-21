@@ -4,10 +4,7 @@ head
   = stylesheet_link_tag "normalize", "application"
 
 
-.branding-temporary
-  | stacey software
-
-header#nav
+/header#nav
   #branding
     | stacey software
   ul#menu
@@ -19,7 +16,27 @@ header#nav
       a href="#statistics" What we provide
     li 
       a#hire-us.cta-button href="#trigger-sale" Hire us
-  
+
+nav#nav
+  a.brand href="#" stacey software
+
+  label.show-menu for="show-menu"
+    i#down.fa.fa-bars
+    i#up.fa.fa-times
+
+  input#show-menu type="checkbox" role="button"
+  ul#menu
+    li
+      a href="#hook" Why us?
+    li
+      a href="#testimonials" Clients
+    li
+      a href="#statistics" What we provide
+    li
+      a#hire-us.cta-button href="#trigger-sale" Hire us
+
+
+
 /! Hero
 section#hero
   .row

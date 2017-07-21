@@ -9,17 +9,117 @@
     left: 5px; }
   25% {
     left: 0px; } }
-body {
-  background: #010a22;
-  background-image: linear-gradient(#010a22, #757a86, #010a22); }
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+  font-size: 16px;
+  background: #010a22;
+  background-image: linear-gradient(#010a22, #757a86, #010a22); }
 
+#nav {
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  padding: 5px;
+  z-index: 9999;
+  width: 100%;
+  min-height: 50px;
+  max-height: 300px;
+  background: white;
+  box-shadow: 0 0 10px gray;
+  line-height: 50px;
+  box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.42), 0 3px 20px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2); }
+  #nav.visible {
+    visibility: visible; }
+    #nav.visible .brand {
+      color: #333; }
+  #nav li {
+    display: inline-block;
+    margin-right: 20px; }
+    #nav li a {
+      font-weight: initial; }
+  #nav .brand {
+    visibility: visible;
+    margin-left: 20px;
+    text-transform: lowercase;
+    font-size: 1.5rem;
+    color: #fff;
+    font-family: "Futura";
+    font-weight: lighter;
+    letter-spacing: 1px; }
+    #nav .brand:hover {
+      color: orange; }
+    #nav .brand > img {
+      height: inherit; }
+
+#menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  max-width: max-content;
+  float: right; }
+  #menu #hire-us {
+    padding: 8px;
+    border: 2px solid orange; }
+    #menu #hire-us:hover {
+      background-color: white; }
+
+.show-menu {
+  display: none;
+  cursor: pointer;
+  max-width: max-content;
+  float: right;
+  margin-top: 17px;
+  margin-right: 15px; }
+  .show-menu img {
+    padding-top: 20px;
+    height: 30px; }
+  .show-menu #up {
+    display: none; }
+
+input[type=checkbox] {
+  display: none; }
+  input[type=checkbox]:checked ~ #menu {
+    display: block;
+    text-align: center; }
+
+@media screen and (max-width: 760px) {
+  #menu {
+    display: none;
+    float: none;
+    max-width: 100%; }
+
+  #menu li, li a {
+    width: 100%; }
+
+  .show-menu {
+    display: block; } }
 p {
-  color: #808080; }
+  color: #808080;
+  line-height: 1.9; }
+
+a {
+  color: #777;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.75em;
+  letter-spacing: 0.17em;
+  font-weight: bold;
+  cursor: pointer; }
+  a:hover {
+    color: orange; }
+
+h3 {
+  text-transform: uppercase;
+  font-size: 0.9em; }
 
 h1, h2, h3, h4, h5, h6 {
   color: #333; }
@@ -27,14 +127,6 @@ h1, h2, h3, h4, h5, h6 {
 ul {
   list-style-type: none;
   padding: 0; }
-
-li a {
-  color: #808080;
-  font-weight: initial; }
-  li a:hover {
-    color: orange;
-    font-weight: bold;
-    cursor: pointer; }
 
 .cta-button {
   background: orange;
@@ -53,48 +145,6 @@ li a {
   background: white;
   border-radius: 6px;
   box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px 5px rgba(0, 0, 0, 0.2); }
-
-.branding-temporary {
-  position: fixed;
-  color: white;
-  font-family: "Futura";
-  font-size: 1.5em;
-  padding: 15px; }
-
-#nav {
-  position: fixed;
-  display: table;
-  z-index: 99;
-  top: 0;
-  background: white;
-  display: none;
-  width: 100%;
-  font-family: "Futura";
-  padding: 5px;
-  line-height: 35px;
-  font-size: 1.5em;
-  line-height: 40px;
-  box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.42), 0 3px 20px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2); }
-  #nav #branding {
-    display: inline; }
-  #nav #menu {
-    line-height: 32px;
-    margin: 0;
-    display: inline;
-    overflow: hidden;
-    float: right;
-    font-family: sans-serif;
-    font-size: 12px;
-    text-transform: uppercase; }
-    #nav #menu li {
-      float: left;
-      margin: 5px 10px;
-      letter-spacing: 1px; }
-    #nav #menu #hire-us {
-      padding: 8px;
-      border: 2px solid orange; }
-      #nav #menu #hire-us:hover {
-        background-color: white; }
 
 .hero {
   height: 600px;
@@ -116,8 +166,6 @@ li a {
     cursor: pointer;
     font-size: 0.6em;
     padding: 5px 10px;
-    font-weight: bold;
-    font-family: sans-serif;
     letter-spacing: 2px;
     box-shadow: 1px 0px 1px #e29200, 0px 1px 1px orange, 2px 1px 1px #e29200, 1px 2px 1px orange, 3px 2px 1px #e29200, 2px 3px 1px orange, 4px 3px 1px #e29200, 3px 4px 1px orange;
     transition: background-color 500ms linear; }
@@ -129,8 +177,7 @@ li a {
       text-align: right; } }
 
 #hook {
-  margin-top: 0;
-  line-height: 25px; }
+  margin-top: 0; }
   #hook .dont-worry:after {
     position: relative;
     content: "\279E";
@@ -198,26 +245,25 @@ li a {
         width: 100%;
         height: auto; }
     #testimonials .testimonial .description {
-      font-size: 16px;
       font-style: italic;
       color: #808080;
-      line-height: 30px;
-      margin: 10px 0 20px; }
+      line-height: 1.9em; }
       #testimonials .testimonial .description:before, #testimonials .testimonial .description:after {
         content: "\"";
         font-size: 2em;
-        margin: 0 5px;
+        margin: 0 0.2em;
         color: orange;
-        font-weight: bold; }
+        font-weight: bold;
+        line-height: 0; }
     #testimonials .testimonial .testimonial-title {
-      font-size: 14px;
+      font-size: 0.9em;
       font-weight: bold;
       margin: 0;
       color: #333;
       text-transform: uppercase; }
     #testimonials .testimonial .post {
       display: block;
-      font-size: 13px;
+      font-size: 0.82em;
       color: #777;
       margin-bottom: 15px;
       text-transform: capitalize; }
@@ -231,30 +277,12 @@ li a {
 #value-prop {
   background-color: white;
   position: relative;
-  text-align: center;
-  /*
-  .prompt, .affordable, .stylish {
-    color: orange;
-    position: relative;
-
-    &:after {
-      font-family: "FontAwesome";
-      color: $stacey-light;
-      position: absolute;
-    }
-  }
-  */ }
-  #value-prop h3 {
-    text-transform: uppercase;
-    font-size: 15px; }
+  text-align: center; }
   #value-prop i {
     font-size: 5em; }
-  #value-prop p {
-    line-height: 25px; }
 
 #statistics {
-  text-align: center;
-  line-height: 30px; }
+  text-align: center; }
   #statistics .percentage {
     font-size: 3em;
     color: rgba(0, 0, 0, 0.7); }
@@ -262,24 +290,19 @@ li a {
       margin: 0 5px; }
       #statistics .percentage i.faded {
         color: rgba(0, 0, 0, 0.4); }
-  #statistics .stat-credit {
-    margin: 0 auto;
-    font-size: 0.6em; }
 
 #trigger-sale {
   background: orange;
   height: 600px;
   width: 100%;
   text-align: center;
-  font-size: 1.7em;
   display: table; }
+  #trigger-sale h2 {
+    font-size: 2.75rem; }
   #trigger-sale a {
-    text-transform: uppercase;
     background: orange;
     color: white;
     padding: 20px 20px;
-    font-size: 0.75rem;
-    letter-spacing: 2px;
     text-align: center;
     box-shadow: 0 8px 12px 1px rgba(0, 0, 0, 0.14), 0 3px 15px 2.5px rgba(0, 0, 0, 0.12), 0 4px 5px 2.5px rgba(0, 0, 0, 0.2); }
     #trigger-sale a:hover {
@@ -296,7 +319,6 @@ li a {
       #trigger-sale #contact-form form input, #trigger-sale #contact-form form textarea, #trigger-sale #contact-form form button {
         text-transform: uppercase;
         letter-spacing: 2px;
-        font-size: 0.75rem;
         width: 100%;
         padding: 20px;
         border: 0;
@@ -330,17 +352,7 @@ footer {
   width: 100%;
   height: 100px;
   text-align: center;
-  background: #333;
-  /*#contact {
-    text-transform: uppercase;
-    margin-top: 10px;
-    
-    a {
-      padding: 10px;
-      border: 2px solid orange;
-      color: orange;
-    }
-  }*/ }
+  background: #333; }
   footer ul {
     overflow: hidden;
     width: 155px;
@@ -351,26 +363,12 @@ footer {
       float: right;
       padding: 0 5px; }
       footer ul li a {
-        font-size: 0.75em;
-        color: #777;
-        text-transform: uppercase; }
+        color: #777; }
   footer #copyright {
     font-size: 0.5em; }
-  footer a {
-    font-size: 14px;
-    color: white;
-    font-weight: bold;
-    letter-spacing: 2px; }
 
 * {
   box-sizing: border-box; }
-
-a {
-  text-decoration: none;
-  color: orange;
-  font-weight: bold; }
-  a:hover {
-    color: #010a22; }
 
 img {
   max-width: 100%;
