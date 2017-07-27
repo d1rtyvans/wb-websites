@@ -6,6 +6,11 @@ module SsLandingPage
     register Padrino::Helpers
     enable :sessions
 
+
+    configure :development, :test do
+      # set :delivery_method, :test
+    end
+
     ##
     # Caching support.
     #
