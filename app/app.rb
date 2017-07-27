@@ -6,6 +6,7 @@ module SsLandingPage
     register Padrino::Helpers
     enable :sessions
 
+    layout :main
 
     configure :development, :test do
       set :delivery_method, :test

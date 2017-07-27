@@ -10,10 +10,15 @@ SsLandingPage::App.controllers :home do
       subject: "WBW contact from #{params[:name]}",
       body: params[:message]
     )
+    session[:name] = params[:name].titleize
 
-    # USE THEIR NAME.
-    redirect_to "/" # go to thank you page
+    redirect_to "/thank_you" # go to thank you page
   end
+
+  get :thank_you, map: "/thank_you" do
+    render "thank_you"
+  end
+
   
   # get :index, :map => '/foo/bar' do
   #   session[:foo] = 'bar'

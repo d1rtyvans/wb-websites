@@ -4,16 +4,17 @@ head
   = stylesheet_link_tag "normalize", "application"
   = favicon_tag "favicon.png"
 
-= partial "nav"
-= partial "hero"
-.content-container
-  = partial "hook"
-= partial "testimonials"
-.content-container
-  = partial "statistics"
-  = partial "value-prop"
-= partial "trigger-sale"
-= partial "footer"
+/= partial "nav"
+.container
+  = partial "hero"
+  .content-container
+    = partial "hook"
+  = partial "testimonials"
+  .content-container
+    = partial "statistics"
+    = partial "value-prop"
+  = partial "trigger-sale"
+  = partial "footer"
 
-script src="https://use.fontawesome.com/1038f978d1.js"
-= javascript_include_tag "jquery.js", "application"
+/script src="https://use.fontawesome.com/1038f978d1.js"
+/= javascript_include_tag "jquery.js", "application"

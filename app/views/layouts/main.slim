@@ -1,0 +1,12 @@
+head
+  title Stacey Software | We make great websites. Want one?
+  meta content="width=device-width, initial-scale=1.0" name="viewport"
+  = stylesheet_link_tag "normalize", "application"
+  = favicon_tag "favicon.png"
+
+= partial "nav"
+= yield
+/= partial "footer"
+
+script src="https://use.fontawesome.com/1038f978d1.js"
+= javascript_include_tag "jquery.js", "application"
