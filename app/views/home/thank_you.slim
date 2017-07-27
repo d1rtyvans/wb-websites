@@ -1,6 +1,16 @@
 section#thank-you
   header
-    h1 THANKS #{session[:name]}, U BITCH
+    h1 Thanks, #{session[:name]}!
 
-  p You a real ass nigga bro. Thank 4 fuxxin wit us
-.thank-you-background-image
+  p
+    | We'll be in touch within a few days. In the meantime, feel free to--
+    ul
+      li
+        a.social-link href="tel:510-909-3590" title="(510) 909-3590"
+          i.fa.fa-phone-square
+        span Contact our founder Chris
+      li
+        a.social-link href="https://www.facebook.com/staceysoftware"
+          i.fa.fa-facebook-official
+        span Reach out to us on Facebook
+  

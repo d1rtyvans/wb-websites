@@ -8,7 +8,7 @@ Error: Undefined variable: "$stacey-blue".
 11:   font-family: sans-serif;
 12:   font-size: 16px;
 13:   background: $stacey-blue;
-14:   background-image:
+14:   /*background-image:
 15:     linear-gradient(
 16:       $stacey-blue,
 17:       #757a86,
@@ -88,4 +88,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$stacey-blue\".\A         on line 13 of /Users/Yago/Documents/apps/wb-websites/app/stylesheets/global.scss\A \A 8: \A 9: body {\A 10:   padding: 0;\A 11:   font-family: sans-serif;\A 12:   font-size: 16px;\A 13:   background: $stacey-blue;\A 14:   background-image:\A 15:     linear-gradient(\A 16:       $stacey-blue,\A 17:       #757a86,\A 18:       $stacey-blue"; }
+  content: "Error: Undefined variable: \"$stacey-blue\".\A         on line 13 of /Users/Yago/Documents/apps/wb-websites/app/stylesheets/global.scss\A \A 8: \A 9: body {\A 10:   padding: 0;\A 11:   font-family: sans-serif;\A 12:   font-size: 16px;\A 13:   background: $stacey-blue;\A 14:   /*background-image:\A 15:     linear-gradient(\A 16:       $stacey-blue,\A 17:       #757a86,\A 18:       $stacey-blue"; }

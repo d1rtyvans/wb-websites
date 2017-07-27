@@ -40,8 +40,16 @@
   // contact form fade in
   $("#convert").click(function(event) {
     event.preventDefault();
+    fadeInContactForm();
+  });
+
+  $(".hire-cta").click(function() {
+    fadeInContactForm();
+  });
+
+  function fadeInContactForm() {
     $("#call-to-action").removeClass("fade-in");
     $("#contact-form").addClass("fade-in");
     $("#name").focus();
-  });
+  }
 })(jQuery);

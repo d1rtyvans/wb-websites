@@ -12,7 +12,11 @@ SsLandingPage::App.controllers :home do
     )
     session[:name] = params[:name].titleize
 
-    redirect_to "/thank_you" # go to thank you page
+    if validate_contact_input # only do this if no js is present
+      redirect_to "/thank_you" # go to thank you page
+    else
+      render "index"
+    end
   end
 
   get :thank_you, map: "/thank_you" do
