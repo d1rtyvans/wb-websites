@@ -24,10 +24,10 @@ ActiveRecord::Base.configurations[:development] = {
 
 ActiveRecord::Base.configurations[:production] = {
   :adapter  => 'postgresql',
-  :database => 'dfr1bu5uf23ced',
-  :username => 'pnelhqfcwscriz',
-  :password => '3f61f3b791639321ed99a745687d4fecdc9d11f67a2e9c4c8be1efcba69bf54c',
-  :host     => 'ec2-54-83-205-71.compute-1.amazonaws.com',
+  :database => 'd3qh78kv1dhmrv',
+  :username => 'vxtdrhmyhqpugd',
+  :password => 'c6186719538bfea7ea5621fce972a0b19a487e6eb8cf293899242f2e857e43e8',
+  :host     => 'ec2-23-23-86-179.compute-1.amazonaws.com',
   :port     => 5432
 }
 
