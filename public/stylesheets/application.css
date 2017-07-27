@@ -159,15 +159,6 @@ input[type=checkbox] {
   background-size: cover;
   z-index: -1; }
 
-/*
-body {
-  background-image: url("../../images/fireworks.jpg");
-  filter: brightness(75%) grayscale(70%);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-*/
 @keyframes bounce-right {
   0% {
     left: 0; }
