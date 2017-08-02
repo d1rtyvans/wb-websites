@@ -311,10 +311,32 @@ a.social-link {
 
 #value-prop {
   background-color: white;
-  position: relative;
-  text-align: center; }
-  #value-prop i {
-    font-size: 5em; }
+  text-align: center;
+  padding: 2em 0; }
+  #value-prop h3 {
+    font-size: 1.3em;
+    margin: 0;
+    text-transform: capitalize;
+    letter-spacing: 0.1em; }
+  #value-prop p {
+    margin: 0.3em 0; }
+  #value-prop img {
+    border-radius: 6px;
+    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2); }
+  #value-prop .bio-card .row {
+    overflow: visible; }
+  #value-prop .bio-image {
+    padding: 0; }
+  #value-prop .bio-content {
+    padding: 0 0 0 1em;
+    text-align: left; }
+  #value-prop .bio-position {
+    color: #808080;
+    text-transform: lowercase;
+    letter-spacing: 0.1em;
+    font-weight: lighter; }
+    #value-prop .bio-position:before {
+      content: " - "; }
 
 #statistics {
   text-align: center; }
