@@ -52,4 +52,7 @@
     $("#contact-form").addClass("fade-in");
     $("#name").focus();
   }
+
+  // testimonial carousel
+  $(".owl-carousel").owlCarousel();
 })(jQuery);

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Concert+One|Fredoka+One|Fugaz+One|PT+Sans|Passion+One|Rubik:400i|Ubuntu|Open+Sans");
 html {
   box-sizing: border-box; }
 
@@ -8,13 +9,7 @@ body {
   padding: 0;
   font-family: sans-serif;
   font-size: 16px;
-  background: #010a22;
-  /*background-image:
-    linear-gradient(
-      $stacey-blue,
-      #757a86,
-      $stacey-blue
-    );*/ }
+  background: #010a22; }
 
 p {
   color: #808080;
@@ -183,6 +178,15 @@ a.social-link {
     left: 5px; }
   25% {
     left: 0px; } }
+h1 {
+  font-family: 'Rubik', "Lucida Sans Unicode", "Lucida Grande", sans-serif; }
+
+h2 {
+  font-family: sans-serif; }
+
+p {
+  font-family: 'PT Sans', sans-serif; }
+
 .hero {
   height: 600px;
   text-align: center;
@@ -190,9 +194,8 @@ a.social-link {
   line-height: 50px; }
   .hero h1 {
     display: table-cell;
-    color: white;
+    color: #fff;
     vertical-align: middle;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     letter-spacing: 1.75px;
     font-weight: lighter; }
     @media only screen and (min-width: 768px) {
@@ -211,9 +214,6 @@ a.social-link {
     .hero a:hover {
       background-color: #ffba3a;
       transition: background-color 500ms linear; }
-  @media only screen and (min-width: 600px) {
-    .hero {
-      text-align: right; } }
 
 #hook {
   margin-top: 0; }
@@ -300,13 +300,15 @@ a.social-link {
       font-weight: bold;
       margin: 0;
       color: #333;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      font-family: 'Fugaz One', cursive; }
     #testimonials .testimonial .post {
       display: block;
       font-size: 0.82em;
       color: #777;
       margin-bottom: 15px;
-      text-transform: capitalize; }
+      text-transform: capitalize;
+      font-style: italic; }
     #testimonials .testimonial .post:before {
       content: "";
       width: 30px;
@@ -317,12 +319,23 @@ a.social-link {
 #value-prop {
   background-color: white;
   text-align: center;
-  padding: 2em 0; }
+  padding: 2em 0;
+  /*
+  .bio-position {
+    color: $copy;
+    text-transform: lowercase;
+    letter-spacing: 0.1em;
+    font-weight: lighter;
+
+    &:before {
+      content: " - ";
+    }
+  }
+  */ }
   #value-prop h3 {
     font-size: 1.3em;
     margin: 0;
-    text-transform: capitalize;
-    letter-spacing: 0.1em; }
+    text-transform: capitalize; }
   #value-prop p {
     margin: 0.3em 0; }
   #value-prop img {
@@ -331,7 +344,7 @@ a.social-link {
   #value-prop .bio-card {
     max-width: 600px;
     margin: 0 auto;
-    padding: 2em 1em; }
+    padding: 2em 15px; }
     #value-prop .bio-card .row {
       overflow: visible; }
     @media only screen and (min-width: 768px) {
@@ -350,13 +363,15 @@ a.social-link {
       #value-prop .bio-content {
         margin-top: 0;
         text-align: left; } }
-  #value-prop .bio-position {
-    color: #808080;
+  #value-prop .bio-name:after {
     text-transform: lowercase;
-    letter-spacing: 0.1em;
-    font-weight: lighter; }
-    #value-prop .bio-position:before {
-      content: " - "; }
+    color: #b5b5b5;
+    letter-spacing: 0;
+    font-weight: 500; }
+  #value-prop .bio-name.chris:after {
+    content: " founder"; }
+  #value-prop .bio-name.dylan:after {
+    content: " designer"; }
 
 #statistics {
   text-align: center; }

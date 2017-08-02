@@ -8,6 +8,8 @@
 @import "thank_you";
 
 
+@import url('https://fonts.googleapis.com/css?family=Concert+One|Fredoka+One|Fugaz+One|PT+Sans|Passion+One|Rubik:400i|Ubuntu|Open+Sans');
+
 %clearfix {
   &:after {
     content: "";
@@ -40,6 +42,18 @@ $copy: #808080;
   }
 }
 
+h1 {
+  font-family: 'Rubik', "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+h2 {
+  font-family: sans-serif;
+}
+
+p {
+  font-family: 'PT Sans', sans-serif;
+}
+
 // FIX DIS SHIT
 .hero {
   height: 600px;
@@ -49,9 +63,8 @@ $copy: #808080;
   
   h1 {
     display: table-cell;
-    color: white;
+    color: #fff;
     vertical-align: middle;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     letter-spacing: 1.75px;
     font-weight: lighter;
 
@@ -76,10 +89,6 @@ $copy: #808080;
       background-color: #ffba3a;
       transition: background-color 500ms linear;
     }
-  }
-  
-  @media only screen and (min-width: 600px) {
-    text-align: right; // MOBILE FIRST BITCH
   }
 }
 
@@ -217,6 +226,7 @@ $copy: #808080;
       margin: 0;
       color: $dark-gray;
       text-transform: uppercase;
+      font-family: 'Fugaz One', cursive; // possibly for testimonial?
     }
     
     .post {
@@ -225,6 +235,7 @@ $copy: #808080;
       color: $light-gray;
       margin-bottom: 15px;
       text-transform: capitalize;
+      font-style: italic;
     }
     
     .post:before {
@@ -247,7 +258,6 @@ $copy: #808080;
     font-size: 1.3em;
     margin: 0;
     text-transform: capitalize;
-    letter-spacing: 0.1em;
   }
 
   p {
@@ -262,7 +272,7 @@ $copy: #808080;
   .bio-card {
     max-width: 600px;
     margin: 0 auto;
-    padding: 2em 1em;
+    padding: 2em 15px;
 
     @extend %clearfix;
 
@@ -298,6 +308,24 @@ $copy: #808080;
     }
   }
 
+  .bio-name {
+    &:after {
+      text-transform: lowercase;
+      color: #b5b5b5;
+      letter-spacing: 0;
+      font-weight: 500;
+    }
+
+    &.chris:after {
+      content: " founder";
+    }
+
+    &.dylan:after {
+      content: " designer";
+    }
+  }
+
+  /*
   .bio-position {
     color: $copy;
     text-transform: lowercase;
@@ -308,6 +336,7 @@ $copy: #808080;
       content: " - ";
     }
   }
+  */
 }
 
 

@@ -2,6 +2,9 @@ head
   title Way Better Websites | We make great websites. Want one?
   meta content="width=device-width, initial-scale=1.0" name="viewport"
   = stylesheet_link_tag "normalize", "application"
+  link rel="stylesheet" href="stylesheets/owl_carousel/owl.carousel.min.css"
+  link rel="stylesheet" href="stylesheets/owl_carousel/owl.theme.default.min.css"
+
   = favicon_tag "favicon.png"
 
 = partial "nav"
@@ -9,4 +12,4 @@ head
 /= partial "footer"
 
 script src="https://use.fontawesome.com/1038f978d1.js"
-= javascript_include_tag "jquery.js", "application"
+= javascript_include_tag "jquery.js", "owl.carousel.min.js", "application"
