@@ -7,6 +7,15 @@
 @import "nav";
 @import "thank_you";
 
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
 $copy: #808080;
 
 @keyframes bounce-right {
@@ -229,7 +238,6 @@ $copy: #808080;
   
 }
 
-
 #value-prop {
   background-color: white;
   text-align: center;
@@ -251,17 +259,43 @@ $copy: #808080;
     box-shadow: 0 16px 38px -12px rgba(0,0,0,0.56), 0 4px 25px 0 rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.2); 
   }
 
-  .bio-card .row {
-    overflow: visible;
+  .bio-card {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2em 1em;
+
+    @extend %clearfix;
+
+    .row {
+      overflow: visible;
+    }
+
+    @media only screen and (min-width: $desktop) {
+      padding: 3em 0;
+    }
   }
 
   .bio-image {
     padding: 0;
+
+    img {
+      //max-width: 300px;
+
+      @media only screen and (min-width: $desktop) {
+        max-width: 100%;
+      }
+    }
   }
 
   .bio-content {
+    margin-top: 2.5em;
+    text-align: center;
     padding: 0 0 0 1em;
-    text-align: left;
+
+    @media only screen and (min-width: $desktop) {
+      margin-top: 0;
+      text-align: left;
+    }
   }
 
   .bio-position {

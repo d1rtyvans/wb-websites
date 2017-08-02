@@ -167,6 +167,11 @@ a.social-link {
     a.social-link i.fa.fa-facebook-official {
       color: #3b5998; }
 
+#value-prop .bio-card:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 @keyframes bounce-right {
   0% {
     left: 0; }
@@ -323,13 +328,28 @@ a.social-link {
   #value-prop img {
     border-radius: 6px;
     box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2); }
-  #value-prop .bio-card .row {
-    overflow: visible; }
+  #value-prop .bio-card {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2em 1em; }
+    #value-prop .bio-card .row {
+      overflow: visible; }
+    @media only screen and (min-width: 768px) {
+      #value-prop .bio-card {
+        padding: 3em 0; } }
   #value-prop .bio-image {
     padding: 0; }
+    @media only screen and (min-width: 768px) {
+      #value-prop .bio-image img {
+        max-width: 100%; } }
   #value-prop .bio-content {
-    padding: 0 0 0 1em;
-    text-align: left; }
+    margin-top: 2.5em;
+    text-align: center;
+    padding: 0 0 0 1em; }
+    @media only screen and (min-width: 768px) {
+      #value-prop .bio-content {
+        margin-top: 0;
+        text-align: left; } }
   #value-prop .bio-position {
     color: #808080;
     text-transform: lowercase;
