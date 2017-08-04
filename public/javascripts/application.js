@@ -54,5 +54,13 @@
   }
 
   // testimonial carousel
-  $(".owl-carousel").owlCarousel();
+  $(".owl-carousel").owlCarousel({
+    items: 1,
+    loop: true,
+    nav: true,
+    pagination: true,
+    navText:["",""],
+    autoPlay: false,
+    margin: 10
+  });
 })(jQuery);

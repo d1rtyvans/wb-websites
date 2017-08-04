@@ -251,8 +251,14 @@ p {
 #testimonials {
   padding: 150px 0;
   position: relative;
-  overflow: hidden; }
-  #testimonials .background-image {
+  overflow: hidden;
+  background-image: url("https://static.pexels.com/photos/7100/iphone-desk-laptop-notebook.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*
+  .background-image {
     position: absolute;
     top: 0;
     left: 0;
@@ -263,15 +269,53 @@ p {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; }
-  #testimonials .content {
-    position: relative;
-    z-index: 3; }
+    background-size: cover;
+  }
+  */ }
+  #testimonials .owl-nav {
+    width: 80%;
+    margin: 0 auto;
+    opacity: 0; }
+  #testimonials .owl-prev {
+    left: 8.5%; }
+    #testimonials .owl-prev:after {
+      content: "\f104"; }
+  #testimonials .owl-next {
+    right: 8.5%; }
+    #testimonials .owl-next:after {
+      content: "\f105"; }
+  #testimonials .owl-prev,
+  #testimonials .owl-next {
+    bottom: 50%; }
+    #testimonials .owl-prev:after,
+    #testimonials .owl-next:after {
+      color: white;
+      font-family: "FontAwesome";
+      width: 28px;
+      height: 28px;
+      font-size: 14px; }
+  #testimonials .owl-nav div {
+    background: orange;
+    opacity: 1;
+    border-radius: 50%;
+    padding: 5px 10px;
+    position: absolute; }
+  #testimonials .owl-carousel:hover .owl-nav {
+    opacity: 1; }
   #testimonials .testimonial {
+    width: 80%;
+    margin: 50px auto;
     text-align: center;
-    margin: 50px 10px 0;
     padding: 0 10% 1%;
-    background: #fff; }
+    background: #fff;
+    cursor: move;
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab; }
+    #testimonials .testimonial:active {
+      cursor: grabbing;
+      cursor: -moz-grabbing;
+      cursor: -webkit-grabbing; }
     #testimonials .testimonial .pic {
       width: 100px;
       height: 100px;

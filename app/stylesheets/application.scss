@@ -163,7 +163,16 @@ p {
   padding: 150px 0;
   position: relative;
   overflow: hidden;
+  background-image: url("https://static.pexels.com/photos/7100/iphone-desk-laptop-notebook.jpg");
+  //filter: brightness(75%) grayscale(70%);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  //@extend %clearfix;
   
+  /*
   .background-image {
     position: absolute;
     top: 0;
@@ -177,17 +186,75 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
   }
+  */
   
-  .content {
-    position: relative;
-    z-index: 3;
+  .owl-nav {
+    width: 80%;
+    margin: 0 auto;
+    opacity: 0;
+
+    //@extend %clearfix;
+  }
+
+  .owl-prev {
+    left: 8.5%;
+
+
+    &:after {
+      content: "\f104";
+    }
+  }
+
+  .owl-next {
+    right: 8.5%;
+
+    &:after {
+      content: "\f105";
+    }
+  }
+
+  .owl-prev,
+  .owl-next {
+    bottom: 50%;
+
+    &:after {
+      color: white;
+      font-family: "FontAwesome";
+      width: 28px;
+      height: 28px;
+      font-size: 14px;
+    }
+  }
+
+
+  .owl-nav div {
+    background: orange;
+    opacity: 1;
+    border-radius: 50%;
+    padding: 4px 10px;
+    position: absolute;
+  }
+
+  .owl-carousel:hover .owl-nav {
+    opacity: 1;
   }
   
   .testimonial {
+    width: 80%;
+    margin: 50px auto;
     text-align: center;
-    margin: 50px 10px 0;
     padding: 0 10% 1%;
     background: #fff;
+    cursor: move;
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+
+    &:active {
+      cursor: grabbing;
+      cursor: -moz-grabbing;
+      cursor: -webkit-grabbing;
+    }
     
     .pic {
       width: 100px;
