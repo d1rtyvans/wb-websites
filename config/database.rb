@@ -22,12 +22,21 @@ ActiveRecord::Base.configurations[:development] = {
   :port     => 5432
 }
 
-ActiveRecord::Base.configurations[:production] = {
+ActiveRecord::Base.configurations[:staging] = {
   :adapter  => 'postgresql',
   :database => 'd3qh78kv1dhmrv',
   :username => 'vxtdrhmyhqpugd',
   :password => 'c6186719538bfea7ea5621fce972a0b19a487e6eb8cf293899242f2e857e43e8',
   :host     => 'ec2-23-23-86-179.compute-1.amazonaws.com',
+  :port     => 5432
+}
+
+ActiveRecord::Base.configurations[:production] = {
+  :adapter  => 'postgresql',
+  :database => 'ddikae90a2fqah',
+  :username => 'yvwdayalkacerw',
+  :password => '9b1f4e0f8af7cdaa015347cdd8bba7af7c31bf97bc1dc59456c527689f42b5c4',
+  :host     => 'ec2-54-221-221-153.compute-1.amazonaws.com',
   :port     => 5432
 }
 
