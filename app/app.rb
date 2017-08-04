@@ -10,6 +10,15 @@ module SsLandingPage
 
     configure :development, :test do
       set :delivery_method, :test
+      disable :asset_stamp
+    end
+
+    configure :staging do
+      set :delivery_method, :test
+      set :reload, true
+      set :reload_templates, true
+      disable :asset_stamp
+      set :logging, true
     end
 
     configure :production do
