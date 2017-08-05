@@ -77,6 +77,10 @@ fieldset {
     #nav.visible .brand {
       color: #333; }
   #nav li {
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 0.75em;
+    letter-spacing: 1px;
     display: inline-block;
     margin-right: 20px;
     padding: 2px; }
@@ -179,6 +183,17 @@ a.social-link {
     left: 5px; }
   25% {
     left: 0px; } }
+@keyframes bounce-down {
+  0% {
+    bottom: -20px; }
+  6.25% {
+    bottom: -25px; }
+  12.5% {
+    bottom: -20px; }
+  18.75% {
+    bottom: -25px; }
+  25% {
+    bottom: -20px; } }
 h1 {
   font-family: 'Rubik', "Lucida Sans Unicode", "Lucida Grande", sans-serif; }
 
@@ -215,12 +230,25 @@ h2 {
 
 #hook {
   margin-top: 0; }
+  #hook .first-hook-container {
+    position: relative; }
   #hook .dont-worry:after {
     position: relative;
-    content: "\279E";
     color: orange;
-    margin-left: 15px;
-    animation: bounce-right 3s infinite 2s; }
+    margin-left: 15px; }
+    @media only screen and (min-width: 768px) {
+      #hook .dont-worry:after {
+        content: "\279E";
+        animation: bounce-right 3s infinite 2s; } }
+  @media only screen and (max-width: 768px) {
+    #hook #first-hook-copy:after {
+      color: orange;
+      content: "\2193";
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      font-size: 2em;
+      animation: bounce-down 3s infinite 2s; } }
   #hook .human, #hook .business {
     line-height: 30px; }
   @media only screen and (min-width: 768px) {
@@ -228,7 +256,8 @@ h2 {
       width: 295px;
       word-wrap: break-word; } }
   #hook .first-hook {
-    margin-top: 15px; }
+    margin-top: 15px;
+    overflow: visible; }
   #hook .second-hook {
     margin-top: 30px; }
   #hook .business {
@@ -240,11 +269,15 @@ h2 {
   #hook h2 {
     margin: 0; }
   #hook .shitty-website {
-    padding: 0 40px; }
+    padding: 0 40px;
+    overflow: visible; }
     #hook .shitty-website img {
       filter: grayscale(25%);
       box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
-      margin-bottom: 30px; }
+      margin: 30px 0; }
+      @media only screen and (min-width: 768px) {
+        #hook .shitty-website img {
+          margin: 0; } }
 
 #testimonials {
   padding: 150px 0;
@@ -427,10 +460,9 @@ h2 {
 
 #trigger-sale {
   background: orange;
-  height: 600px;
-  width: 100%;
-  text-align: center;
-  display: table; }
+  min-height: 600px;
+  padding: 50px 0;
+  width: 100%; }
   #trigger-sale h2 {
     font-size: 2.75rem; }
   #trigger-sale a {
@@ -445,21 +477,20 @@ h2 {
   #trigger-sale #contact-form {
     text-align: center; }
     #trigger-sale #contact-form form {
-      width: 300px;
+      width: 80%;
       margin: 0 auto; }
+      @media only screen and (min-width: 768px) {
+        #trigger-sale #contact-form form {
+          width: 450px; } }
       #trigger-sale #contact-form form input, #trigger-sale #contact-form form textarea {
         background: white;
         box-shadow: 0 8px 12px 1px rgba(0, 0, 0, 0.14), 0 3px 15px 2.5px rgba(0, 0, 0, 0.12), 0 4px 5px 2.5px rgba(0, 0, 0, 0.2);
         letter-spacing: 0.05em;
-        font-size: 16px;
         width: 100%;
         padding: 20px;
         border: 0;
         outline: 0;
         box-shadow: 0 8px 12px 1px rgba(0, 0, 0, 0.14), 0 3px 15px 2.5px rgba(0, 0, 0, 0.12), 0 4px 5px 2.5px rgba(0, 0, 0, 0.2); }
-        @media only screen and (min-width: 768px) {
-          #trigger-sale #contact-form form input, #trigger-sale #contact-form form textarea {
-            font-size: 0.75em; } }
       #trigger-sale #contact-form form input[type="submit"] {
         cursor: pointer;
         text-align: center;
@@ -469,10 +500,14 @@ h2 {
         box-shadow: 0 8px 12px 1px rgba(0, 0, 0, 0.14), 0 3px 15px 2.5px rgba(0, 0, 0, 0.12), 0 4px 5px 2.5px rgba(0, 0, 0, 0.2); }
       #trigger-sale #contact-form form textarea {
         resize: vertical;
-        min-height: 150px;
+        min-height: 200px;
         line-height: 1.8; }
   #trigger-sale #convert {
     font-size: 1.3em; }
+  #trigger-sale #call-to-action {
+    width: 100%;
+    text-align: center;
+    padding-top: 135px; }
   #trigger-sale #call-to-action,
   #trigger-sale #contact-form {
     visibility: hidden;
@@ -496,8 +531,8 @@ footer {
   font-family: sans-serif; }
   footer ul {
     overflow: hidden;
-    width: 200px;
     text-align: center;
+    max-width: max-content;
     margin: 0 auto;
     padding-top: 30px;
     text-transform: uppercase; }

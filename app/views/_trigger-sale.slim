@@ -1,34 +1,33 @@
 section#trigger-sale
-  .vert-align
-    #call-to-action.fade-in
-      h2 Let's get started.
-      a#convert href="#" Schedule a free consultation
+  #call-to-action.fade-in
+    h2 Let's get started.
+    a#convert href="#" Schedule a free consultation
 
-    #contact-form
-      = form_tag "/contact" do
-        = flash_tag(:notice)
-        = field_set_tag do
-          p
-            / prob don't need this ID
-            = text_field_tag :name,
-              id: "name",
-              placeholder: "Let's get your name,",
-              required: true,
-              value: params[:name]
-          p
-            = email_field_tag :email,
-              placeholder: "and your email.",
-              required: true,
-              value: params[:email]
-          p
-            = text_area_tag :message,
-              id: "message",
-              placeholder: "What can we do for you?",
-              required: true,
-              value: params[:message]
-        = field_set_tag do
-          p
-            = submit_tag "Send message"
+  #contact-form
+    = form_tag "/contact" do
+      = flash_tag(:notice)
+      = field_set_tag do
+        p
+          / prob don't need this ID
+          = text_field_tag :name,
+            id: "name",
+            placeholder: "Let's get your name,",
+            required: true,
+            value: params[:name]
+        p
+          = email_field_tag :email,
+            placeholder: "and your email.",
+            required: true,
+            value: params[:email]
+        p
+          = text_area_tag :message,
+            id: "message",
+            placeholder: "What can we do for you?",
+            required: true,
+            value: params[:message]
+      = field_set_tag do
+        p
+          = submit_tag "Send message"
 
 
     /#contact-form

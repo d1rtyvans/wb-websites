@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$desktop".
-        on line 101 of /Users/Yago/Documents/apps/wb-websites/app/stylesheets/nav.scss
+        on line 105 of /Users/Yago/Documents/apps/wb-websites/app/stylesheets/nav.scss
 
-96:     text-align: center;
-97:   }
-98: }
-99: 
-100: // DO MOBILE FIRST U BEEZY
-101: @media screen and (max-width: $desktop) {
-102:   #menu {
-103:     display: none;
-104:     float: none;
-105:     max-width: 100%;
-106:   }
+100:     text-align: center;
+101:   }
+102: }
+103: 
+104: // DO MOBILE FIRST U BEEZY
+105: @media screen and (max-width: $desktop) {
+106:   #menu {
+107:     display: none;
+108:     float: none;
+109:     max-width: 100%;
+110:   }
 
 Backtrace:
-/Users/Yago/Documents/apps/wb-websites/app/stylesheets/nav.scss:101
+/Users/Yago/Documents/apps/wb-websites/app/stylesheets/nav.scss:105
 /Users/Yago/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Users/Yago/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/script/tree/node.rb:58:in `perform'
 /Users/Yago/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:543:in `block in run_interp_no_strip'
@@ -81,4 +81,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$desktop\".\A         on line 101 of /Users/Yago/Documents/apps/wb-websites/app/stylesheets/nav.scss\A \A 96:     text-align: center;\A 97:   }\A 98: }\A 99: \A 100: // DO MOBILE FIRST U BEEZY\A 101: @media screen and (max-width: $desktop) {\A 102:   #menu {\A 103:     display: none;\A 104:     float: none;\A 105:     max-width: 100%;\A 106:   }"; }
+  content: "Error: Undefined variable: \"$desktop\".\A         on line 105 of /Users/Yago/Documents/apps/wb-websites/app/stylesheets/nav.scss\A \A 100:     text-align: center;\A 101:   }\A 102: }\A 103: \A 104: // DO MOBILE FIRST U BEEZY\A 105: @media screen and (max-width: $desktop) {\A 106:   #menu {\A 107:     display: none;\A 108:     float: none;\A 109:     max-width: 100%;\A 110:   }"; }
