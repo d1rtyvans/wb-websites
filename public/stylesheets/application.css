@@ -7,20 +7,20 @@ html {
 
 body {
   padding: 0;
-  font-family: sans-serif;
   font-size: 16px;
-  background: #010a22; }
+  background: #010a22;
+  font-family: 'PT Sans', sans-serif; }
 
 p {
   color: #808080;
   line-height: 1.9; }
 
+input {
+  font-family: "PT Sans", sans-serif; }
+
 a {
   color: #777;
-  text-transform: uppercase;
   text-decoration: none;
-  font-size: 0.75em;
-  letter-spacing: 0.17em;
   font-weight: bold;
   cursor: pointer; }
   a:hover {
@@ -78,7 +78,8 @@ fieldset {
       color: #333; }
   #nav li {
     display: inline-block;
-    margin-right: 20px; }
+    margin-right: 20px;
+    padding: 2px; }
     #nav li a {
       font-weight: initial; }
   #nav .brand {
@@ -183,9 +184,6 @@ h1 {
 
 h2 {
   font-family: sans-serif; }
-
-p {
-  font-family: 'PT Sans', sans-serif; }
 
 .hero {
   height: 600px;
@@ -452,8 +450,7 @@ p {
       #trigger-sale #contact-form form input, #trigger-sale #contact-form form textarea {
         background: white;
         box-shadow: 0 8px 12px 1px rgba(0, 0, 0, 0.14), 0 3px 15px 2.5px rgba(0, 0, 0, 0.12), 0 4px 5px 2.5px rgba(0, 0, 0, 0.2);
-        text-transform: uppercase;
-        letter-spacing: 2px;
+        letter-spacing: 0.05em;
         font-size: 16px;
         width: 100%;
         padding: 20px;
@@ -474,6 +471,8 @@ p {
         resize: vertical;
         min-height: 150px;
         line-height: 1.8; }
+  #trigger-sale #convert {
+    font-size: 1.3em; }
   #trigger-sale #call-to-action,
   #trigger-sale #contact-form {
     visibility: hidden;
@@ -493,13 +492,15 @@ footer {
   width: 100%;
   height: 100px;
   text-align: center;
-  background: #333; }
+  background: #333;
+  font-family: sans-serif; }
   footer ul {
     overflow: hidden;
-    width: 155px;
+    width: 200px;
     text-align: center;
     margin: 0 auto;
-    padding-top: 30px; }
+    padding-top: 30px;
+    text-transform: uppercase; }
     footer ul li {
       float: right;
       padding: 0 5px; }

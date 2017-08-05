@@ -8,9 +8,9 @@ html {
 
 body {
   padding: 0;
-  font-family: sans-serif;
   font-size: 16px;
   background: $stacey-blue;
+  font-family: 'PT Sans', sans-serif;
 }
 
 p {
@@ -18,12 +18,13 @@ p {
   line-height: 1.9;
 }
 
+input {
+  font-family: "PT Sans", sans-serif;
+}
+
 a {
   color: $light-gray;
-  text-transform: uppercase;
   text-decoration: none;
-  font-size: $all-caps;
-  letter-spacing: $letter-space;
   font-weight: bold;
   cursor: pointer;
 

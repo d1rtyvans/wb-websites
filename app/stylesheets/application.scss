@@ -51,7 +51,7 @@ h2 {
 }
 
 p {
-  font-family: 'PT Sans', sans-serif;
+  //font-family: 'PT Sans', sans-serif;
 }
 
 // FIX DIS SHIT
@@ -430,12 +430,10 @@ p {
 
 #trigger-sale {
   background: orange;
-  //padding: 200px 0 250px;
   height: 600px;
   width: 100%;
   text-align: center;
   display: table;
-  //font-size: $all-caps;
   
   h2 {
     font-size: 2.75rem;
@@ -465,8 +463,7 @@ p {
       input, textarea {
         background: white;
         box-shadow: 0 8px 12px 1px rgba(0,0,0,0.14), 0 3px 15px 2.5px rgba(0,0,0,0.12), 0 4px 5px 2.5px rgba(0,0,0,0.2);
-        text-transform: uppercase;
-        letter-spacing: 2px;
+        letter-spacing: 0.05em;
         font-size: 16px;
         width: 100%;
         padding: 20px;
@@ -496,6 +493,10 @@ p {
     }
   }
 
+  #convert {
+    font-size: 1.3em;
+  }
+
   #call-to-action,
   #contact-form {
     visibility: hidden;
@@ -522,13 +523,15 @@ footer {
   height: 100px;
   text-align: center;
   background: #333;
+  font-family: sans-serif;
   
   ul {
     overflow: hidden;
-    width: 155px;
+    width: 200px;
     text-align: center;
     margin: 0 auto;
     padding-top: 30px;
+    text-transform: uppercase;
     
     li {
       float: right;
