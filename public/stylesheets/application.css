@@ -159,13 +159,12 @@ ul {
   ul li {
     padding: 0.5em 0; }
 
-a.social-link {
+a.social-link i.fa {
   font-size: 2em;
-  margin-right: 0.5em; }
-  a.social-link i.fa {
-    color: orange; }
-    a.social-link i.fa.fa-facebook-official {
-      color: #3b5998; }
+  margin-right: 0.5em;
+  color: orange; }
+  a.social-link i.fa.fa-facebook-official {
+    color: #3b5998; }
 
 #value-prop .bio-card:after {
   content: "";
