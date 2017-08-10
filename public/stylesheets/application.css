@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Concert+One|Fredoka+One|Fugaz+One|PT+Sans|Passion+One|Rubik:400i|Ubuntu|Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Concert+One|Fredoka+One|Fugaz+One|PT+Sans|Passion+One|Rubik|Ubuntu|Open+Sans");
 html {
   box-sizing: border-box; }
 
@@ -194,7 +194,8 @@ a.social-link i.fa {
   25% {
     bottom: -20px; } }
 h1 {
-  font-family: 'Rubik', "Lucida Sans Unicode", "Lucida Grande", sans-serif; }
+  font-family: 'Rubik', "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-style: italic; }
 
 h2 {
   font-family: sans-serif; }
