@@ -201,15 +201,15 @@ a.social-link {
     left: 0px; } }
 @keyframes bounce-down {
   0% {
-    bottom: -20px; }
+    bottom: 15px; }
   6.25% {
-    bottom: -25px; }
+    bottom: 10px; }
   12.5% {
-    bottom: -20px; }
+    bottom: 15px; }
   18.75% {
-    bottom: -25px; }
+    bottom: 10px; }
   25% {
-    bottom: -20px; } }
+    bottom: 15px; } }
 h1 {
   font-family: 'Rubik', "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   font-style: italic; }
@@ -257,26 +257,28 @@ h2 {
   top: -50px; }
 
 #hook {
-  margin-top: 0; }
-  #hook .first-hook-container {
-    position: relative; }
-  #hook .dont-worry:after {
-    position: relative;
-    color: orange;
-    margin-left: 15px; }
-    @media only screen and (min-width: 768px) {
-      #hook .dont-worry:after {
-        content: "\279E";
-        animation: bounce-right 3s infinite 2s; } }
-  @media only screen and (max-width: 768px) {
-    #hook #first-hook-copy:after {
+  margin-top: 0;
+  /*#first-hook-copy:after {
+    @media only screen and (max-width: $desktop) {
       color: orange;
       content: "\2193";
       position: absolute;
       bottom: -20px;
       left: 45%;
       font-size: 2em;
-      animation: bounce-down 3s infinite 2s; } }
+      animation: bounce-down 3s infinite 2s;
+    }
+  }*/ }
+  #hook .first-hook-container {
+    position: relative; }
+  #hook .dont-worry:after {
+    position: relative;
+    color: orange; }
+    @media only screen and (min-width: 768px) {
+      #hook .dont-worry:after {
+        margin-left: 15px;
+        content: "\279E";
+        animation: bounce-right 3s infinite 2s; } }
   #hook .human, #hook .business {
     line-height: 30px; }
   @media only screen and (min-width: 768px) {
@@ -285,7 +287,11 @@ h2 {
       word-wrap: break-word; } }
   #hook .first-hook {
     margin-top: 15px;
-    overflow: visible; }
+    overflow: visible;
+    text-align: center; }
+    @media only screen and (min-width: 768px) {
+      #hook .first-hook {
+        text-align: left; } }
   #hook .second-hook {
     margin-top: 30px; }
   #hook .business {
@@ -297,17 +303,45 @@ h2 {
   #hook h2 {
     margin: 0; }
   #hook .shitty-website {
-    text-align: center;
-    padding: 0 40px;
+    width: 80%;
+    margin: 0 auto 45px auto;
     overflow: visible; }
     #hook .shitty-website img {
+      width: 100%;
+      height: auto;
       filter: grayscale(25%);
-      box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
-      margin: 30px 0; }
-      @media only screen and (min-width: 768px) {
+      box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2); }
+    @media only screen and (max-width: 768px) {
+      #hook .shitty-website:before {
+        color: orange;
+        content: "\2193";
+        position: relative;
+        font-size: 2em;
+        animation: bounce-down 3s infinite 2s;
+        bottom: 15px; } }
+    @media only screen and (min-width: 768px) {
+      #hook .shitty-website {
+        float: right;
+        margin: -40px 0 0 0;
+        width: 50%;
+        text-align: center; }
         #hook .shitty-website img {
-          margin: 0; } }
+          width: 80%; } }
 
+#hook h2.dont-worry {
+  text-align: center;
+  margin-bottom: 25px; }
+
+#hook p#first-hook-copy {
+  text-align: center; }
+
+@media only screen and (min-width: 768px) {
+  #hook h2.dont-worry {
+    margin: 0; }
+
+  #hook p#first-hook-copy,
+  #hook h2.dont-worry {
+    text-align: left; } }
 #testimonials {
   padding: 150px 0;
   position: relative;
