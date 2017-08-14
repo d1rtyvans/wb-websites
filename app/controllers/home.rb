@@ -10,7 +10,7 @@ SsLandingPage::App.controllers :home do
       subject: "WBW contact from #{params[:name]}",
       body: params[:message]
     )
-    session[:name] = params[:name].titleize
+    session[:name] = params[:name].capitalize
 
     if validate_contact_input # only do this if no js is present
       redirect_to "/thank_you" # go to thank you page
