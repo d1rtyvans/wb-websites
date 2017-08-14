@@ -66,8 +66,8 @@ fieldset {
   padding: 5px;
   z-index: 9999;
   width: 100%;
-  min-height: 50px;
-  max-height: 300px;
+  min-height: 65px;
+  max-height: 350px;
   background: white;
   box-shadow: 0 0 10px gray;
   line-height: 50px;
@@ -75,6 +75,7 @@ fieldset {
   #nav.visible {
     visibility: visible; }
     #nav.visible .brand {
+      line-height: 2;
       color: #333; }
   #nav li {
     text-transform: uppercase;
@@ -229,11 +230,15 @@ h2 {
       transition: background-color 500ms linear; }
 
 #hook-anchor,
-#stats-anchor {
+#stats-anchor,
+#team-anchor {
   display: block;
   position: relative;
   top: -125px;
   visibility: hidden; }
+
+#team-anchor {
+  top: -50px; }
 
 #hook {
   margin-top: 0; }
