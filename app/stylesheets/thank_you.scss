@@ -10,6 +10,10 @@ $stacey-blue: #010a22;
   background: white;
   border-radius: 6px;
   box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px 5px rgba(0,0,0,0.2);
+
+  h1 {
+    font-size: 1.5em;
+  }
 }
 
 p {
@@ -27,13 +31,28 @@ ul {
 }
 
 a.social-link {
+  font-size: 0.9em;
+
   i.fa {
-    font-size: 2em;
     margin-right: 0.5em;
     color: orange;
 
     &.fa-facebook-official {
       color: #3b5998;
     }
+  }
+}
+
+@media only screen and (min-width: $desktop) {
+  #thank-you h1,
+  #thank-you i.fa {
+    font-size: 2em;
+  }
+  a.social-link {
+    font-size: 1em;
+  }
+
+  i.fa {
+    //font-size: 2em;
   }
 }

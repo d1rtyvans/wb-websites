@@ -8,5 +8,5 @@ db/*.db
 .*.sw*
 
 .bundle/
-.css
-.map
+*.css
+*.map

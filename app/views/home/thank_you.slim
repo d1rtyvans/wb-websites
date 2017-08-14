@@ -1,6 +1,9 @@
 section#thank-you
   header
-    h1 Thanks, #{session[:name]}!
+    - if !session[:name].blank?
+      h1 Thanks, #{session[:name]}!
+    - else 
+      h1 Thanks!
 
   p
     | We'll be in touch within a few days. In the meantime, feel free to--

@@ -59,7 +59,8 @@ fieldset {
   box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px 5px rgba(0, 0, 0, 0.2); }
   @media only screen and (min-width: 768px) {
     .content-container {
-      margin: -15 30px; } }
+      margin: -15 30px;
+      padding: 40px 10px; } }
 
 #nav {
   position: fixed;
@@ -78,7 +79,6 @@ fieldset {
   #nav.visible {
     visibility: visible; }
     #nav.visible .brand {
-      line-height: 2;
       color: #333; }
   #nav li {
     text-transform: uppercase;
@@ -92,9 +92,9 @@ fieldset {
       font-weight: initial; }
   #nav .brand {
     visibility: visible;
-    margin-left: 20px;
+    margin-left: 0.75em;
     text-transform: lowercase;
-    font-size: 1.5rem;
+    font-size: 1.2em;
     color: #fff;
     font-family: "Futura";
     font-weight: lighter;
@@ -103,6 +103,9 @@ fieldset {
       color: orange; }
     #nav .brand > img {
       height: inherit; }
+    @media only screen and (min-width: 768px) {
+      #nav .brand {
+        font-size: 1.5em; } }
 
 #menu {
   list-style-type: none;
@@ -155,6 +158,8 @@ input[type=checkbox] {
   background: white;
   border-radius: 6px;
   box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px 5px rgba(0, 0, 0, 0.2); }
+  #thank-you h1 {
+    font-size: 1.5em; }
 
 ul {
   text-align: left;
@@ -163,13 +168,21 @@ ul {
   ul li {
     padding: 0.5em 0; }
 
-a.social-link i.fa {
-  font-size: 2em;
-  margin-right: 0.5em;
-  color: orange; }
-  a.social-link i.fa.fa-facebook-official {
-    color: #3b5998; }
+a.social-link {
+  font-size: 0.9em; }
+  a.social-link i.fa {
+    margin-right: 0.5em;
+    color: orange; }
+    a.social-link i.fa.fa-facebook-official {
+      color: #3b5998; }
 
+@media only screen and (min-width: 768px) {
+  #thank-you h1,
+  #thank-you i.fa {
+    font-size: 2em; }
+
+  a.social-link {
+    font-size: 1em; } }
 #value-prop .bio-card:after {
   content: "";
   display: table;
@@ -261,7 +274,7 @@ h2 {
       content: "\2193";
       position: absolute;
       bottom: -20px;
-      left: 50%;
+      left: 45%;
       font-size: 2em;
       animation: bounce-down 3s infinite 2s; } }
   #hook .human, #hook .business {
@@ -284,6 +297,7 @@ h2 {
   #hook h2 {
     margin: 0; }
   #hook .shitty-website {
+    text-align: center;
     padding: 0 40px;
     overflow: visible; }
     #hook .shitty-website img {
@@ -433,7 +447,7 @@ h2 {
   #value-prop .bio-card {
     max-width: 725px;
     margin: 0 auto;
-    padding: 2em 5px; }
+    padding: 2em 15px; }
     #value-prop .bio-card .row {
       overflow: visible; }
     @media only screen and (min-width: 768px) {
@@ -465,12 +479,15 @@ h2 {
 #statistics {
   text-align: center; }
   #statistics .percentage {
-    font-size: 3em;
+    font-size: 2em;
     color: rgba(0, 0, 0, 0.7); }
     #statistics .percentage i {
       margin: 0 5px; }
       #statistics .percentage i.faded {
         color: rgba(0, 0, 0, 0.4); }
+    @media only screen and (min-width: 768px) {
+      #statistics .percentage {
+        font-size: 3em; } }
 
 #trigger-sale {
   background: orange;
