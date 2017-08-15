@@ -111,7 +111,7 @@ fieldset {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  max-width: max-content;
+  max-width: 475px;
   float: right; }
   #menu #hire-us {
     padding: 8px;
@@ -163,10 +163,14 @@ input[type=checkbox] {
 
 ul {
   text-align: left;
-  max-width: max-content;
+  display: block;
+  max-width: 205px;
   margin: 0 auto; }
   ul li {
     padding: 0.5em 0; }
+  @media only screen and (min-width: 768px) {
+    ul {
+      max-width: 250px; } }
 
 a.social-link {
   font-size: 0.9em; }
@@ -578,7 +582,8 @@ h2 {
     visibility: hidden;
     opacity: 0;
     position: absolute;
-    left: -9999px; }
+    left: -9999px;
+    bottom: 0; }
     #trigger-sale #call-to-action.fade-in,
     #trigger-sale #contact-form.fade-in {
       visibility: visible;

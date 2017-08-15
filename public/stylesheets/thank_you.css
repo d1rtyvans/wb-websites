@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$desktop".
-        on line 46 of /Users/Yago/Documents/apps/wb-websites/app/stylesheets/thank_you.scss
+        on line 33 of /Users/Yago/Documents/apps/wb-websites/app/stylesheets/thank_you.scss
 
-41:       color: #3b5998;
-42:     }
-43:   }
-44: }
-45: 
-46: @media only screen and (min-width: $desktop) {
-47:   #thank-you h1,
-48:   #thank-you i.fa {
-49:     font-size: 2em;
-50:   }
-51:   a.social-link {
+28: 
+29:   li {
+30:     padding: 0.5em 0;
+31:   }
+32: 
+33:   @media only screen and (min-width: $desktop) {
+34:     max-width: 250px;
+35:   }
+36: }
+37: 
+38: a.social-link {
 
 Backtrace:
-/Users/Yago/Documents/apps/wb-websites/app/stylesheets/thank_you.scss:46
+/Users/Yago/Documents/apps/wb-websites/app/stylesheets/thank_you.scss:33
 /Users/Yago/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Users/Yago/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/script/tree/node.rb:58:in `perform'
 /Users/Yago/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:543:in `block in run_interp_no_strip'
@@ -23,6 +23,17 @@ Backtrace:
 /Users/Yago/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:541:in `run_interp_no_strip'
 /Users/Yago/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:548:in `run_interp'
 /Users/Yago/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:513:in `visit_media'
+/Users/Yago/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/Yago/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Users/Yago/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
+/Users/Yago/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
+/Users/Yago/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `with_base'
+/Users/Yago/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/Yago/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `block (2 levels) in visit_rule'
+/Users/Yago/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `map'
+/Users/Yago/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `block in visit_rule'
+/Users/Yago/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Users/Yago/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:432:in `visit_rule'
 /Users/Yago/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
 /Users/Yago/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
 /Users/Yago/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
@@ -81,4 +92,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$desktop\".\A         on line 46 of /Users/Yago/Documents/apps/wb-websites/app/stylesheets/thank_you.scss\A \A 41:       color: #3b5998;\A 42:     }\A 43:   }\A 44: }\A 45: \A 46: @media only screen and (min-width: $desktop) {\A 47:   #thank-you h1,\A 48:   #thank-you i.fa {\A 49:     font-size: 2em;\A 50:   }\A 51:   a.social-link {"; }
+  content: "Error: Undefined variable: \"$desktop\".\A         on line 33 of /Users/Yago/Documents/apps/wb-websites/app/stylesheets/thank_you.scss\A \A 28: \A 29:   li {\A 30:     padding: 0.5em 0;\A 31:   }\A 32: \A 33:   @media only screen and (min-width: $desktop) {\A 34:     max-width: 250px;\A 35:   }\A 36: }\A 37: \A 38: a.social-link {"; }
