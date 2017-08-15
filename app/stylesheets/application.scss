@@ -447,7 +447,7 @@ p {
   }
 
   .bio-card {
-    max-width: 725px;
+    max-width: 755px;
     margin: 0 auto;
     padding: 2em 15px;
 
@@ -458,7 +458,7 @@ p {
     }
 
     @media only screen and (min-width: $desktop) {
-      padding: 3em 0;
+      padding: 3em 15px;
     }
   }
 
