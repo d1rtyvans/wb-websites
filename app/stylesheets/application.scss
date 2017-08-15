@@ -275,28 +275,12 @@ p {
   position: relative;
   overflow: hidden;
   //filter: brightness(75%) grayscale(70%);
+  //background-image: url("../images/testimonials-mobile.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
+  background-image: url("../images/testimonials.jpg");
   background-size: cover;
-
-  //@extend %clearfix;
-  
-  /*
-  .background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-image: url("https://static.pexels.com/photos/7100/iphone-desk-laptop-notebook.jpg");
-    filter: brightness(75%) grayscale(70%);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  */
   
   .owl-nav {
     width: 80%;
