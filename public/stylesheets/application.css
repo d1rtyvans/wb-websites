@@ -300,7 +300,7 @@ h2 {
     margin-top: 30px; }
   #hook .business {
     display: inline; }
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 857px) {
       #hook .business:before {
         content: "\a";
         white-space: pre; } }
