@@ -281,6 +281,13 @@ p {
   background-repeat: no-repeat;
   background-image: url("../images/testimonials.jpg");
   background-size: cover;
+
+  @media 
+  only screen 
+  and (-webkit-min-device-pixel-ratio: 2) 
+  and (max-device-width: 768px) {
+    background-attachment: initial;
+  }
   
   .owl-nav {
     width: 80%;
@@ -366,10 +373,14 @@ p {
       }
     }
     
-    .description {
+    p.description {
       font-style: italic;
       color: $copy;
-      line-height: 1.9em;
+      line-height: 1.7;
+
+      @media only screen and (min-width: $desktop) {
+        line-height: 1.9;
+      }
       
       &:before, &:after {
         content: "\"";

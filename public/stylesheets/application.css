@@ -359,6 +359,9 @@ h2 {
   background-repeat: no-repeat;
   background-image: url("../images/testimonials.jpg");
   background-size: cover; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 768px) {
+    #testimonials {
+      background-attachment: initial; } }
   #testimonials .owl-nav {
     width: 80%;
     margin: 0 auto;
@@ -415,11 +418,14 @@ h2 {
       #testimonials .testimonial .pic img {
         width: 100%;
         height: auto; }
-    #testimonials .testimonial .description {
+    #testimonials .testimonial p.description {
       font-style: italic;
       color: #808080;
-      line-height: 1.9em; }
-      #testimonials .testimonial .description:before, #testimonials .testimonial .description:after {
+      line-height: 1.7; }
+      @media only screen and (min-width: 768px) {
+        #testimonials .testimonial p.description {
+          line-height: 1.9; } }
+      #testimonials .testimonial p.description:before, #testimonials .testimonial p.description:after {
         content: "\"";
         font-size: 2em;
         margin: 0 0.2em;
