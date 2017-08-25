@@ -79,39 +79,53 @@ p {
 }
 
 // FIX DIS SHIT
-.hero {
+#hero {
+  width: 100%;
   height: 600px;
   text-align: center;
   display: table;
-  line-height: 50px;
+  //line-height: 50px;
   
-  h1 {
+  .tagline {
     display: table-cell;
-    color: #fff;
     vertical-align: middle;
-    letter-spacing: 1.75px;
-    font-weight: lighter;
+
+    h1 {
+      color: #fff;
+      letter-spacing: 1.75px;
+      font-weight: lighter;
+      margin: 0;
+      font-style: normal;
+      font-size: 1.5em;
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.4);
+      font: "Ubuntu";
+      font-size: 1.1em;
+      margin: 0 0 1em 0;
+      font-style: italic;
+    }
+  
+    a {
+      font-family: 'Rubik', "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+      background-color: orange;
+      color: $stacey-blue;
+      cursor: pointer;
+      padding: 5px 10px;
+      box-shadow: 1px 0px 1px $shaded-orange, 0px 1px 1px orange, 2px 1px 1px $shaded-orange, 1px 2px 1px orange, 3px 2px 1px $shaded-orange, 2px 3px 1px orange, 4px 3px 1px $shaded-orange, 3px 4px 1px orange;
+      transition: background-color 500ms linear;
+      
+      &:hover {
+        background-color: #ffba3a;
+        transition: background-color 500ms linear;
+      }
+    }
 
     @media only screen and (min-width: $desktop) {
-      padding-right: 15px;
-    }
-  }
-  
-  a {
-    text-transform: uppercase;
-    background-color: orange;
-    color: $stacey-blue;
-    cursor: pointer;
-    font-size: 0.6em;
-    padding: 5px 10px;
-    letter-spacing: 2px;
-    //box-shadow: 1px 0px 1px $shaded-orange, 0px 1px 1px orange, 2px 1px 1px $shaded-orange, 1px 2px 1px orange, 3px 2px 1px $shaded-orange, 2px 3px 1px orange, 4px 3px 1px $shaded-orange, 3px 4px 1px orange, 5px 4px 1px $shaded-orange, 4px 5px 1px orange, 6px 5px 1px $shaded-orange;
-    box-shadow: 1px 0px 1px $shaded-orange, 0px 1px 1px orange, 2px 1px 1px $shaded-orange, 1px 2px 1px orange, 3px 2px 1px $shaded-orange, 2px 3px 1px orange, 4px 3px 1px $shaded-orange, 3px 4px 1px orange;
-    transition: background-color 500ms linear;
-    
-    &:hover {
-      background-color: #ffba3a;
-      transition: background-color 500ms linear;
+      h1 {
+        font-size: 2em;
+      }
     }
   }
 }
