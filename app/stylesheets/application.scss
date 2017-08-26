@@ -1,7 +1,5 @@
 // DON'T FUCKING FORGET!!!!!
 // ADD FUCKING VENDOR PREFIXES U BITCH
-// INCLUDE CAROUSEL CDN
-
 
 @import url("https://fonts.googleapis.com/css?family=Rubik|Ubuntu|PT+Sans|Fugaz+One");
 
@@ -16,6 +14,8 @@
 @import "styles/statistics";
 @import "styles/trigger-sale";
 @import "styles/thank_you";
+@import "owl_carousel/owl.carousel.min";
+@import "owl_carousel/owl.theme.default.min";
 
 html {
   box-sizing: border-box;
