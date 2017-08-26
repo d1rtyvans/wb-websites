@@ -32,14 +32,6 @@ body {
   font-family: 'PT Sans', sans-serif;
 }
 
-%clearfix {
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-
 h1 {
   font-family: 'Rubik', "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   font-style: italic;
@@ -209,10 +201,11 @@ img {
   overflow: hidden;
 }
 
-/*
+
+// row clearfix
 .row::after {
   content: "";
   clear: "both";
   display: "table";
 }
-*/
+

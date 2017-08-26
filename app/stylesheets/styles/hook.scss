@@ -17,10 +17,7 @@
   }
 
   .first-hook {
-    @extend %clearfix;
-
     margin-top: 15px;
-    overflow: visible;
     text-align: center;
 
     @media only screen and (min-width: $desktop) {
@@ -38,7 +35,7 @@
   
   .shitty-website {
     width: 80%;
-    margin: 0 auto 45px auto;
+    margin: 0 auto 30px auto;
     overflow: visible;
     
     img {
@@ -61,7 +58,7 @@
 
     @media only screen and (min-width: $desktop) {
       float: right;
-      margin: -40px 0 0 0;
+      margin-top: -45px;
       width: 50%;
       text-align: center;
 
