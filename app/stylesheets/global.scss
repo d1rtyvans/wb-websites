@@ -72,13 +72,18 @@ fieldset {
   z-index: 1;
   margin: -15 15px;
   padding: 40px 20px;
+  max-width: 1200px;
   background: white;
   border-radius: 6px;
   box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px 5px rgba(0,0,0,0.2);
 
   @media only screen and (min-width: $desktop) {
-    margin: -15 30px;
+    margin: -15px 30px;
     padding: 40px 10px;
+  }
+
+  @media only screen and (min-width: 1260px) {
+    margin: -15px auto;
   }
 }
 

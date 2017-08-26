@@ -1,0 +1,86 @@
+#team {
+  background-color: white;
+  text-align: center;
+  padding: 2em 0;
+  
+  h3 {
+    font-size: 1.3em;
+    margin: 0;
+    text-transform: capitalize;
+  }
+
+  p {
+    margin: 0.3em 0;
+  }
+
+  img {
+    border-radius: 6px;
+    box-shadow: 0 16px 38px -12px rgba(0,0,0,0.56), 0 4px 25px 0 rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.2); 
+  }
+
+  .bio-card {
+    max-width: 755px;
+    margin: 0 auto;
+    padding: 2em 15px;
+
+    @extend %clearfix;
+
+    .row {
+      overflow: visible;
+    }
+
+    @media only screen and (min-width: $desktop) {
+      padding: 3em 15px;
+    }
+  }
+
+  .bio-image {
+    padding: 0;
+
+    img {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+
+  .bio-content {
+    margin-top: 2.5em;
+    padding: 0;
+
+    @media only screen and (min-width: $desktop) {
+      padding-left: 1em;
+      margin-top: 0;
+      text-align: left;
+    }
+  }
+
+  .bio-name {
+    &:after {
+      text-transform: lowercase;
+      color: #b5b5b5;
+      letter-spacing: 0;
+      font-weight: 500;
+    }
+
+    &.chris:after {
+      content: " founder";
+    }
+
+    &.dylan:after {
+      content: " designer";
+    }
+  }
+
+  /*
+  .bio-position {
+    color: $copy;
+    text-transform: lowercase;
+    letter-spacing: 0.1em;
+    font-weight: lighter;
+
+    &:before {
+      content: " - ";
+    }
+  }
+  */
+}
