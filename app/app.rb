@@ -22,6 +22,9 @@ module SsLandingPage
     end
 
     configure :production do
+      require 'rack-ssl-enforcer'
+      use Rack::SslEnforcer
+
       set :delivery_method, :smtp => {
         address: "smtp.sendgrid.net",
         port: 587,

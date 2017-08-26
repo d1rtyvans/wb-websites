@@ -26,6 +26,10 @@ gem 'pg'
 gem 'rspec', :group => 'test'
 gem 'rack-test', :require => 'rack/test', :group => 'test'
 
+group :production do
+  gem "rack-ssl-enforcer"
+end
+
 # Padrino Stable Gem
 gem 'padrino', '0.14.1.1'
 gem "pry"
