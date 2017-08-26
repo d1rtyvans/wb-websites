@@ -5,23 +5,22 @@
     position: relative;
   }
   
-  .dont-worry:after {
-    position: relative;
-    color: orange;
+  .dont-worry {
+    text-align: center;
+    margin-bottom: 25px;
 
-    @media only screen and (min-width: $desktop) {
-      margin-left: 15px;
-      content: "\279E";
-      animation: bounce-right 3s infinite 2s;
+    &:after {
+      position: relative;
+      color: orange;
     }
   }
 
   .first-hook {
     margin-top: 15px;
     text-align: center;
-
-    @media only screen and (min-width: $desktop) {
-      text-align: left;
+    
+    p {
+      text-align: center;
     }
   }
 
@@ -46,17 +45,29 @@
     }
 
     &:before {
-      @media only screen and (max-width: $desktop) {
-        color: orange;
-        content: "\2193";
-        position: relative;
-        font-size: 2em;
-        animation: bounce-down 3s infinite 2s;
-        bottom: 15px;
+      display: block;
+      color: orange;
+      content: "\2193";
+      position: relative;
+      font-size: 2em;
+      animation: bounce-down 3s infinite 2s;
+      bottom: 15px;
+    }
+  }
+
+  @media only screen and (min-width: $desktop) {
+    .dont-worry {
+      text-align: left;
+      margin: 0;
+
+      &:after {
+        margin-left: 15px;
+        content: "\279E";
+        animation: bounce-right 3s infinite 2s;
       }
     }
 
-    @media only screen and (min-width: $desktop) {
+    .shitty-website {
       float: right;
       margin-top: -45px;
       width: 50%;
@@ -65,34 +76,20 @@
       img {
         width: 80%;
       }
+
+      &:before {
+        display: none;
+      }
+    }
+
+    .first-hook {
+      text-align: left;
+      
+      p {
+        text-align: left;
+        width: 50%;
+        padding-right: 15px;
+      }
     }
   }
 }
-
-#hook h2.dont-worry {
-  text-align: center;
-  margin-bottom: 25px;
-}
-
-#hook p#first-hook-copy {
-  text-align: center;
-}
-
-@media only screen and (min-width: $desktop) {
-  #hook h2.dont-worry {
-    margin: 0;
-  }
-
-  #first-hook-copy {
-    width: 50%;
-    padding-right: 15px;
-  }
-
-  #hook p#first-hook-copy,
-  #hook h2.dont-worry {
-    text-align: left;
-  }
-}
-
-
-
