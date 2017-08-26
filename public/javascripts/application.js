@@ -1,11 +1,7 @@
 (function($) {
   // navbar appear on scroll
   $(window).scroll(function() {
-    var navAppearHeight = 550;
-
-    if (window.innerWidth <= 768) {
-      navAppearHeight = 155;
-    }
+    var navAppearHeight = 155;
 
     if($(this).scrollTop() > navAppearHeight) {
       $("#nav").addClass("visible");
