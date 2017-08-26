@@ -10,10 +10,12 @@ module HomeHelper
   end
 end
 
-def responsive_img(name)
+def responsive_img(name, alt:)
   tag :img,
       src: "images/#{name}.jpg",
-      srcset: "images/#{name}.jpg 1x, images/#{name}@2x.jpg 2x"
+      srcset: "images/#{name}.jpg 1x, images/#{name}@2x.jpg 2x",
+      alt: alt,
+      title: alt
 end
 
 SsLandingPage::App.helpers HomeHelper
