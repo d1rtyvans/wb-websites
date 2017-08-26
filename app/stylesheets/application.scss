@@ -285,11 +285,8 @@ p {
     padding: 0;
 
     img {
-      //max-width: 300px;
-
-      @media only screen and (min-width: $desktop) {
-        max-width: 100%;
-      }
+      width: 100%;
+      max-width: 300px;
     }
   }
 
