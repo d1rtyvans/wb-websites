@@ -2,15 +2,15 @@
 // ADD FUCKING VENDOR PREFIXES U BITCH
 // INCLUDE CAROUSEL CDN
 
+
+@import url("https://fonts.googleapis.com/css?family=Rubik|Ubuntu|PT+Sans|Fugaz+One");
+
 @import "variables";
 @import "global";
 @import "nav";
 @import "testimonials";
 @import "team";
 @import "thank_you";
-
-
-@import url('https://fonts.googleapis.com/css?family=Concert+One|Fredoka+One|Fugaz+One|PT+Sans|Passion+One|Rubik|Ubuntu|Open+Sans');
 
 %clearfix {
   &:after {
