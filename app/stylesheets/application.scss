@@ -89,12 +89,13 @@ p {
   .tagline {
     display: table-cell;
     vertical-align: middle;
+    padding: 0 2em;
 
     h1 {
       color: #fff;
       letter-spacing: 1.75px;
       font-weight: lighter;
-      margin: 0;
+      margin: 0.25em 0;
       font-style: normal;
       font-size: 1.5em;
     }
@@ -102,9 +103,10 @@ p {
     p {
       color: rgba(255, 255, 255, 0.4);
       font: "Ubuntu";
-      font-size: 1.1em;
+      font-size: 0.9em;
       margin: 0 0 1em 0;
       font-style: italic;
+      line-height: initial;
     }
   
     a {
@@ -112,6 +114,9 @@ p {
       background-color: orange;
       color: $stacey-blue;
       cursor: pointer;
+      display: block;
+      width: 50%;
+      margin: 0 auto;
       padding: 5px 10px;
       box-shadow: 1px 0px 1px $shaded-orange, 0px 1px 1px orange, 2px 1px 1px $shaded-orange, 1px 2px 1px orange, 3px 2px 1px $shaded-orange, 2px 3px 1px orange, 4px 3px 1px $shaded-orange, 3px 4px 1px orange;
       transition: background-color 500ms linear;
@@ -125,6 +130,14 @@ p {
     @media only screen and (min-width: $desktop) {
       h1 {
         font-size: 2em;
+      }
+
+      p {
+        font-size: 1.1em;
+      }
+
+      a {
+        width: 200px;
       }
     }
   }
