@@ -54,19 +54,19 @@
     > img {
       height: inherit;
     }
-
-    @media only screen and (min-width: $desktop) {
-      font-size: 1.5em;
-    }
   }
 }
 
 #menu {
+  display: none;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  max-width: 475px;
-  float: right;
+  max-width: 100%;
+
+  li, li a {
+    width: 100%;
+  }
 
   #hire-us {
     padding: 8px;
@@ -79,7 +79,7 @@
 }
 
 .show-menu {
-  display: none;
+  display: block;
   cursor: pointer;
   max-width: max-content;
   float: right;
@@ -105,19 +105,22 @@ input[type=checkbox] {
   }
 }
 
-// DO MOBILE FIRST U BEEZY
-@media screen and (max-width: $desktop) {
+@media only screen and (min-width: $desktop) {
+  #nav a.brand {
+    font-size: 1.5em;
+  }
+
   #menu {
-    display: none;
-    float: none;
-    max-width: 100%;
+    display: block;
+    float: right;
+    max-width: 475px;
   }
 
   #menu li, li a {
-    width: 100%;
+    width: initial;
   }
 
   .show-menu {
-    display: block;
+    display: none;
   }
 }

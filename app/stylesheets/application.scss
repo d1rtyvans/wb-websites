@@ -32,6 +32,11 @@ body {
   font-family: 'PT Sans', sans-serif;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 h1 {
   font-family: 'Rubik', "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   font-style: italic;
@@ -78,7 +83,17 @@ input {
 fieldset {
   border: 0;
 }
-  
+
+footer {
+  color: rgba(1, 10, 34, 0.28);
+  width: 100%;
+  text-align: center;
+  background: orange;
+  font-family: sans-serif;
+  padding: 20px 0;
+  font-size: 0.7em;
+}
+
 
 
 // Reusable styles
@@ -114,6 +129,8 @@ fieldset {
   }
 }
 
+
+// For anchor tag link positioning
 #hook-anchor,
 #stats-anchor,
 #team-anchor {
@@ -127,37 +144,11 @@ fieldset {
   top: -50px;
 }
 
-footer {
-  color: rgba(1, 10, 34, 0.28);
-  width: 100%;
-  text-align: center;
-  background: orange;
-  font-family: sans-serif;
-  padding: 20px 0;
-  font-size: 0.7em;
-}
 
-
-// Boilerplate styling shit
-* {
-  box-sizing: border-box;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.vert-align {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-/*** GRID ***/
+// Grid Layout
 [class*="col-"] {
   float: left;
   padding: 15px;
-  //border: 1px solid red;
 }
 
 [class*="col-"] { // Mobile
@@ -201,11 +192,8 @@ img {
   overflow: hidden;
 }
 
-
-// row clearfix
 .row::after {
   content: "";
   clear: "both";
   display: "table";
 }
-
