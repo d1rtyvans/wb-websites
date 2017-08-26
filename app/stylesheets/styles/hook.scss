@@ -1,0 +1,101 @@
+#hook {
+  margin-top: 0;
+
+  .first-hook-container {
+    position: relative;
+  }
+  
+  .dont-worry:after {
+    position: relative;
+    color: orange;
+
+    @media only screen and (min-width: $desktop) {
+      margin-left: 15px;
+      content: "\279E";
+      animation: bounce-right 3s infinite 2s;
+    }
+  }
+
+  .first-hook {
+    @extend %clearfix;
+
+    margin-top: 15px;
+    overflow: visible;
+    text-align: center;
+
+    @media only screen and (min-width: $desktop) {
+      text-align: left;
+    }
+  }
+
+  .second-hook {
+    margin-top: 30px;
+  }
+  
+  h2 {
+    margin: 0;
+  }
+  
+  .shitty-website {
+    width: 80%;
+    margin: 0 auto 45px auto;
+    overflow: visible;
+    
+    img {
+      width: 100%;
+      height: auto;
+      filter: grayscale(25%);
+      box-shadow: 0 16px 38px -12px rgba(0,0,0,0.56), 0 4px 25px 0 rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.2); 
+    }
+
+    &:before {
+      @media only screen and (max-width: $desktop) {
+        color: orange;
+        content: "\2193";
+        position: relative;
+        font-size: 2em;
+        animation: bounce-down 3s infinite 2s;
+        bottom: 15px;
+      }
+    }
+
+    @media only screen and (min-width: $desktop) {
+      float: right;
+      margin: -40px 0 0 0;
+      width: 50%;
+      text-align: center;
+
+      img {
+        width: 80%;
+      }
+    }
+  }
+}
+
+#hook h2.dont-worry {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+#hook p#first-hook-copy {
+  text-align: center;
+}
+
+@media only screen and (min-width: $desktop) {
+  #hook h2.dont-worry {
+    margin: 0;
+  }
+
+  #first-hook-copy {
+    width: 50%;
+    padding-right: 15px;
+  }
+
+  #hook p#first-hook-copy,
+  #hook h2.dont-worry {
+    text-align: left;
+  }
+}
+
+
+

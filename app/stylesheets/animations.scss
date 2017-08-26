@@ -1,0 +1,44 @@
+@keyframes bounce-right {
+  0% {
+    left: 0;
+  }
+  
+  6.25% {
+    left: 5px;
+  }
+  
+  12.5% {
+    left: 0;
+  }
+  
+  18.75% {
+    left: 5px;
+  }
+  
+  25% {
+    left: 0px;
+  }
+}
+
+@keyframes bounce-down {
+  0% {
+    bottom: 15px;
+  }
+  
+  6.25% {
+    bottom: 10px;
+  }
+  
+  12.5% {
+    bottom: 15px;
+  }
+  
+  18.75% {
+    bottom: 10px;
+  }
+  
+  25% {
+    bottom: 15px;
+  }
+}
+

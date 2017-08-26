@@ -1,0 +1,21 @@
+#statistics {
+  text-align: center;
+
+  .percentage {
+    font-size: 2em;
+    color: rgba(0, 0, 0, 0.7);
+
+    i {
+      margin: 0 5px;
+
+      &.faded {
+        color: rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    @media only screen and (min-width: $desktop) {
+      font-size: 3em;
+    }
+  }
+}
+

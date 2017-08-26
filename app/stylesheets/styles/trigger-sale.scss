@@ -1,0 +1,95 @@
+#trigger-sale {
+  background: orange;
+  min-height: 600px;
+  padding: 50px 0;
+  width: 100%;
+  //text-align: center;
+  //display: table;
+  
+  h2 {
+    font-size: 2.75rem;
+  }
+  
+  a {
+    background: orange; 
+    color: white;
+    padding: 20px 20px;
+    text-align: center;
+    box-shadow: 0 8px 12px 1px rgba(0,0,0,0.14), 0 3px 15px 2.5px rgba(0,0,0,0.12), 0 4px 5px 2.5px rgba(0,0,0,0.2);
+    
+    &:hover {
+      color: orange;
+      background: white;
+    }
+  }
+
+  #contact-form {
+    text-align: center;
+
+    form {
+      width: 80%;
+      margin: 0 auto;
+      //font-size: 1rem;
+
+      @media only screen and (min-width: $desktop) {
+        width: 450px;
+      }
+
+      input, textarea {
+        background: white;
+        box-shadow: 0 8px 12px 1px rgba(0,0,0,0.14), 0 3px 15px 2.5px rgba(0,0,0,0.12), 0 4px 5px 2.5px rgba(0,0,0,0.2);
+        letter-spacing: 0.05em;
+        width: 100%;
+        padding: 20px;
+        border: 0;
+        outline: 0;
+        box-shadow: 0 8px 12px 1px rgba(0,0,0,0.14), 0 3px 15px 2.5px rgba(0,0,0,0.12), 0 4px 5px 2.5px rgba(0,0,0,0.2);
+      }
+
+      input[type="submit"] {
+        cursor: pointer;
+        text-align: center;
+        background: orange;
+        color: white;
+        font-weight: bold;
+        box-shadow: 0 8px 12px 1px rgba(0,0,0,0.14), 0 3px 15px 2.5px rgba(0,0,0,0.12), 0 4px 5px 2.5px rgba(0,0,0,0.2);
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 275px;
+        line-height: 1.4;
+      }
+    }
+  }
+
+  #convert {
+    font-size: 1.3em;
+  }
+
+  #call-to-action {
+    width: 100%;
+    text-align: center;
+    padding-top: 135px;
+  }
+
+  #call-to-action,
+  #contact-form {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: -9999px;
+    bottom: 0;
+
+    &.fade-in {
+      visibility: visible;
+      opacity: 1;
+      position: static;
+    }
+  }
+
+  #contact-form {
+    transition: opacity 1s linear;
+  }
+}
+
