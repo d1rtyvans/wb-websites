@@ -1,0 +1,159 @@
+#testimonials {
+  padding: 150px 0;
+  position: relative;
+  overflow: hidden;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/testimonials.jpg");
+  background-size: cover;
+
+  @media // mobile browser
+  only screen 
+  and (-webkit-min-device-pixel-ratio: 2) 
+  and (max-device-width: 768px) {
+    background-attachment: initial;
+  }
+
+  @media only screen and (min-width: $desktop) {
+    div.testimonial {
+      width: 80%;
+    }
+
+    div.owl-prev {
+      left: 8.5%;
+    }
+
+    div.owl-next {
+      right: 8.5%;
+    }
+
+    p.description {
+      line-height: 1.9;
+    }
+  }
+
+  .testimonial {
+    width: 95%;
+    margin: 50px auto;
+    text-align: center;
+    padding: 0 10% 1%;
+    background: #fff;
+    cursor: move;
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+
+    &:active {
+      cursor: grabbing;
+      cursor: -moz-grabbing;
+      cursor: -webkit-grabbing;
+    }
+    
+    .pic {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 5px solid rgba(255,255,255,0.3);
+      display: inline-block;
+      margin-top: -50px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    
+    p.description {
+      font-style: italic;
+      color: $copy;
+      line-height: 1.7;
+      
+      &:before, &:after {
+        content: "\"";
+        font-size: 2em;
+        margin: 0 0.2em;
+        color: orange;
+        font-weight: bold;
+        line-height: 0;
+      }
+    }
+    
+    .testimonial-title {
+      font-size: $sub-heading;
+      font-weight: bold;
+      margin: 0;
+      color: $dark-gray;
+      text-transform: uppercase;
+      font-family: 'Fugaz One', sans-serif; // possibly for testimonial?
+    }
+    
+    .post {
+      display: block;
+      font-size: $sub-heading - 0.08em;
+      color: $light-gray;
+      margin-bottom: 15px;
+      text-transform: capitalize;
+      font-style: italic;
+    }
+    
+    .post:before {
+      content: "";
+      width: 30px;
+      display: block;
+      margin: 10px auto;
+      border: 1px solid #d3d3d3;
+    }
+  }
+  
+  
+  .owl-nav {
+    width: 80%;
+    margin: 0 auto;
+    opacity: 0;
+  }
+
+  .owl-prev {
+    left: 1%;
+
+
+    &:after {
+      content: "\f104";
+    }
+  }
+
+  .owl-next {
+    right: 1%;
+
+    &:after {
+      content: "\f105";
+    }
+  }
+
+  .owl-prev,
+  .owl-next {
+    bottom: 50%;
+
+    &:after {
+      color: white;
+      font-family: "FontAwesome";
+      width: 28px;
+      height: 28px;
+      font-size: 14px;
+    }
+  }
+
+  .owl-nav div {
+    background: orange;
+    opacity: 1;
+    border-radius: 50%;
+    padding: 8px 15px;
+    position: absolute;
+  }
+
+  .owl-carousel:hover .owl-nav {
+    opacity: 1;
+  }
+}
