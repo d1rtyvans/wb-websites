@@ -43,9 +43,10 @@
     text-transform: lowercase;
     font-size: 1.2em;
     color: #fff;
-    font-family: "Futura";
+    //font-family: "Futura";
+    font-family: "Oswald";
+    letter-spacing: -0.4px;
     font-weight: lighter;
-    letter-spacing: 1px;
 
     &:hover {
       color: orange;
