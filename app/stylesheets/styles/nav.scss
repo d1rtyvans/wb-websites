@@ -12,6 +12,7 @@
   box-shadow: 0 0 10px gray;
   line-height: 50px;
   box-shadow: 0 10px 20px -12px rgba(0,0,0,0.42), 0 3px 20px 0 rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.2);
+  overflow: hidden;
 
   &.visible {
     visibility: visible;
@@ -28,7 +29,7 @@
     font-family: sans-serif;
     font-size: 0.75em;
     letter-spacing: 1px;
-    display: inline-block;
+    display: inline;
     margin-right: $nav-spacing;
     padding: 2px;
 
@@ -106,13 +107,13 @@ input[type=checkbox] {
   }
 }
 
-@media only screen and (min-width: $desktop) {
+@media all and (min-width: $desktop) {
   #nav a.brand {
     font-size: 1.5em;
   }
 
   #menu {
-    display: block;
+    display: inline;
     float: right;
     max-width: 475px;
   }
